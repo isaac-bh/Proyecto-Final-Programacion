@@ -55,14 +55,14 @@ main {
 
 a {
     text-decoration: none;
-    color: blue;
+    color: rgba(0, 131, 92, 1);
 }
 
 /*///////////*/
 /* Contenido */
 /*///////////*/
 h2 {
-    background-color: blue;
+    background-color: rgba(0, 131, 92, 1);
     color: #f3f3f3;
     font-size: 4rem;
     margin: 1rem 0;
@@ -72,14 +72,14 @@ h2 {
 }
 
 h3 {
-    color: #1074db;
+    color: rgb(45, 45, 45);
     font-size: 3rem;
     padding-left: 2.5rem;
     margin: 1rem 0;
 }
 
 h4 {
-    color: #1074db;
+    color: rgb(45, 45, 45);
     font-size: 2rem;
     padding-left: 5rem;
     margin: 1rem 0;
@@ -91,7 +91,26 @@ h4 {
     padding: 1rem 5rem 2.5rem 5rem;
 }
 
-p {
-    font-size: 1.25rem;
+p, ul, li{
+    font-size: 1.5rem;
+    text-align: justify;
+    padding-left: 5rem;
     color: rgb(45, 45, 45);
+}
+
+b {
+    font-size: 1.5rem;
+    color: rgb(45, 45, 45);
+
+}
+
+ul {
+    list-style-position: inside; 
+}
+
+img {
+    display: block;
+    margin: 1rem auto;
+    -webkit-box-shadow: 0px 1px 17px 2px rgba(0,0,0,0.58); 
+    box-shadow: 0px 1px 17px 2px rgba(0,0,0,0.58);
 }
