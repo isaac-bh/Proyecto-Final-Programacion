@@ -8,8 +8,16 @@
 </head>
 <body>
     <div class="head">
-        <h1>Proyecto Final: Programación.</h1>
-        <p id="nombre">Realizado por: Benavides Hernandez Isaac Alain</p>
+        <div class="img-head">
+            <img id="banner" src="./img/cod.png" alt="">
+        </div>
+        <div class="info">
+            <h1>Proyecto Final: Programación.</h1>
+            <p><b>Realizado por:</b> Benavides Hernandez Isaac Alain</p>
+            <p><b>Sección:</b> D24</p>
+            <p><b>NRC:</b> 42556</p>
+            <p><b>Horario:</b> Martes y Jueves de 11 AM a 1 PM.</p>
+        </div>
     </div>
     <div class="flex-main">
         <main>
@@ -17,14 +25,14 @@
                 <div class="unidad" id="programacion-estructurada">
                     <h2>Módulo 1: Programación estructurada.</h2>
                         <h3>1.1. Conceptos basicos de programación estructurada.</h3>
-                            <h4>1.1.1. Definición y características de programación estructurada.</h4>
+                            <h4 class="sub">1.1.1. Definición y características de programación estructurada.</h4>
                             <p>
                                 La programación estructurada es una teoria de programación que busca mejorar la claridad, calidad y el tiempo de desarrollo de un programa. <br><br>
                                 A los finales de los años 70 surgió esta forma de programar, propuesta por Bohm-Jacopini quien decia que era posible escribir todos los programas y aplicaciones posibles utilizando solo 3 estructuras de control fundamentales. Dejando fuera a la instrucción de transferencia incondicional (GOTO). <br><br>
                                 Esta tecnica de programación conduce a mejorar la claridad, calidad y tiempo de desarrollo de un programa. 
                             </p>
 
-                            <h4>1.1.2. Elementos básicos de programación estructurada.</h4>
+                            <h4 class="sub">1.1.2. Elementos básicos de programación estructurada.</h4>
                             <p>
                                 Como ya se menciono anteriormente, en la programación estructurada se utilizan solo 3 estructuras de control para evitar los problemas que generaba la instrucción de transferencia incondicional, estas tres estructuras son las siguientes:
                                 <ul>
@@ -40,54 +48,210 @@
                             <img src="./img/secuencial.png" alt="">
                         <br><br><br>
                         <h3>1.2. Algoritmo.</h3>
-                            <h4>1.2.1. Definición de Algoritmo.</h4>
-                            <h4>1.2.2. Tecnicas para la formulación de algoritmos.</h4>
+                            <h4 class="sub">1.2.1. Definición de Algoritmo.</h4>
+                            <p>
+                                Un algoritmo es una serie de instrucciones secuenciales que permiten ejecutar acciones o realizar alguna determinada acción. Sin los algoritmos nadie sabria que hacer, y las acciones que se buscan hacer no se podrian realizar.
+                            </p>
+                            <p>
+                                Especificamente en el desarrollo de software existen dos tipos de algoritmos:
+                                <ul>
+                                    <li><b>Cuantitativos: </b>son aquellos cuya resolución depende de un cálculo matemático.</li>
+                                    <li><b>Cualitativo: </b>la resolución de estos no depende de cálculos numéricos, sino de secuencias lógicas.</li>
+                                </ul>
+                            </p>
+                            <h4 class="sub">1.2.2. Tecnicas para la formulación de algoritmos.</h4>
+                            <p>En el proceso de desarrollo de software se utilizan principalmente las siguientes dos tecnicas para clarificar el proceso que se debe de llevar:</p>
+                            
                             <h4>1.2.2.1. Diagramas de flujo</h4>
+                            <p>Un diagrama de flujo es la representación gráfica de un algoritmo. También se puede decir que es la representación detallada en forma gráfica de como deben realizarse los pasos en la computadora para producir resultados.</p>
+                            
                             <h4>1.2.2.2. Pseudocódigo</h4>
+                            <p>Es una manera de representar el algoritmo en lenguaje español, esto crea una representación más entendible del código del lenguaje de programación para las personas que no estan familiarizadas con la programación.</p>
+                                <p class="ejemplo">Ejemplo (Práctica 2): </p> <br>
+                                <pre>Principal <br>Inicio <br>    Entero n1, n2, res<br>    Imprimir("Dime dos enteros")<br>    Leer(n1, n2)<br>    res ← n1 + n2<br>    Imprimir("El resultado es: ", res)<br>Fin
+                                </pre>
+
                         <h3>1.3. Estructuras de control.</h3>
-                            <h4>1.3.1. Definición.</h4>
-                            <h4>1.3.2. Secuencial.</h4>
-                            <h4>1.3.3. Selectiva.</h4>
+                            <h4 class="sub">1.3.1. Definición.</h4>
+                                <p>Son los métodos que existen dentro de un programa para dirigir la forma en la que se ejecutan las isntrucciones. Estas modifican el flujo de ejecución, manipulandolo para conveniencia del programa.</p>
+                            <h4 class="sub">1.3.2. Secuencial.</h4>
+                            <p>La estructura secuencial es aquella estructura que ejecutará las instrucciones que contiene dentro de ella en orden descendente. Tienen la siguiente estructura: <br> <br> <pre>Inicio <br>    Instrucción 1 <br>    Instrucción 2 <br>    ... <br>    Instrucción n <br>Fin</pre></p>
+                            <p><br>El ejemplo más sencillo y utilizado de este tipo de estructuras son las funciones, las cuales seran cubiertas más a fondo algunos temas adelante.</p>
+                                <p class="ejemplo">Ejemplo (Práctica 1).</p>
+                                <p class="ejemplo">Pseudocódigo:</p>
+                                <pre>Principal<br>Inicio<br>    Entero a ← 0, b ← 5, c ← 12<br>    a ← b + c / 2 * 10<br>    Imprimir(“a =”, a)<br>    b ← a * a modulo 3<br>    Imprimir(“b =”, b)<br>    c ← 20 modulo 3 / 2 * 5<br>    Imprimir(“c =”, c)<br>    b ← b + c * a + (20 - a)<br>    Imprimir(“b =”, b)<br>Fin</pre>
+                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <img src="./img/1/1.3.2.jpg" alt="" style="height: 60rem; width: auto;">
+                                <p class="ejemplo">Código en C:</p>
+                                <p>falta xd</p>
+                                <p class="ejemplo">Captura en ejecución: </p>
+                                <img src="./img/1/1.3.2_2.jpg" alt="">
+
+                            <h4 class="sub">1.3.3. Selectiva.</h4>
+                            <p>Es una estructura que ejecuta las instrucciones que contiene dependiendo de si la condición con la que fue declarada es verdadera o es falsa. Este tipo de estructura de control se divide en 3 tipos de estructuras secuenciales, la selectiva simple, la selectiva doble y la selectiva multiple.</p>
+
                             <h4>1.3.3.1. Si y si-sino.</h4>
+                            <p>Esta se refiere a dos tipos de estructuras selectivas, la simple y la doble. La estructura selectiva simple es aquella que solo ejecutara las instrucciones que contiene si la condición evaluada es verdadera, si la condición es falsa, esta estructura no ejecutara absolutamente nada.</p>
+                            <p>Mientras que la selectiva doble es la estructura selectiva que tiene dos opciones para ejecutar instrucciones, cuando la condición que evalua es verdadera ejecuta un conjunto de instrucciones y si es falsa otro conjunto diferente de instrucciones.</p>
+                            <p>Existe una derivación de estos dos tipos anteriores, en la cual se utilizan multiples estructuras Si y Si-Sino, a esta se le conoce como estructura selectiva doble anidada y esta tiene más de dos posibilidades para ejecutar instrucciones, si una condición es falsa, se puede evaluar otra condición y si esa es falsa se puede evaluar otra y asi sucesivamente dependiendo de lo que necesitamos solucionar con nuestro programa.</p>
+                                
+                                <p class="ejemplo">Ejemplo selectiva simple (Práctica 8).</p>
+                                <p class="ejemplo">Pseudocódigo:</p>
+                                <pre>Librerias<br>Principal<br>Inicio<br>    Entero ed<br>    Imprimir("Dame tu edad:")<br>    Leer(ed)<br>    Si (ed < 18)<br>    Inicio<br>        Imprimir("Eres menor de edad")<br>        Imprimir("No puedes votar")<br>    Fin<br>    Imprimir("Que tengas un buen día")<br>Fin</pre>
+                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <img src="./img/1/1.3.3.1.1.jpg" alt="" style="height: 60rem; width: auto;">
+                                <p class="ejemplo">Código en C:</p>
+                                <p class="ejemplo">Captura en ejecución: </p>
+                                <img src="./img/1/1.3.3.1.1_2.jpg" alt="">
+
+                                <br>
+
+                                <p class="ejemplo">Ejemplo selectiva doble (Práctica 10).</p>
+                                <p class="ejemplo">Pseudocódigo:</p>
+                                <pre>Librerias<br>Inicio<br>    Entero num<br>    Imprimir("Por favor ingrese un numero entero:")<br>    Leer(num)<br>    Si (num > 0)<br>        Imprimir("Es positivo")<br>    Sino<br>        Imprimir("Es negativo")<br>Fin</pre>
+                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <img src="./img/1/1.3.3.1.2.jpg" alt="" style="height: 60rem; width: auto;">
+                                <p class="ejemplo">Código en C:</p>
+                                <p class="ejemplo">Captura en ejecución: </p>
+                                <img src="./img/1/1.3.3.1.2_2.jpg" alt="">
+
+                                <br>
+
+                                <p class="ejemplo">Ejemplo selectiva doble anidada (Práctica 12).</p>
+                                <p class="ejemplo">Pseudocódigo:</p>
+                                <pre>Librerias<br>Inicio<br>    Entero n1, n2, n3<br>    Imprimir("Ingresa 3 números enteros:")<br>    Leer(n1, n2, n3)<br>    Si ((n1 > n2) Y (n1 > n3))<br>        Imprimir("El numero 'n1' es el mayor.")<br>    Sino si ((n2 > n1) Y (n2 > n3))<br>        Imprimir("El numero 'n2' es el mayor.")<br>    Sino Si ((n3 > n1) Y (n3 > n2))<br>        Imprimir("El numero 'n3' es el mayor.")<br>    Sino<br>        Imprimir("Hay dos o más números iguales.")<br>Fin</pre>
+                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <img src="./img/1/1.3.3.1.3.jpg" alt="" style="height: 60rem; width: auto;">
+                                <p class="ejemplo">Código en C:</p>
+                                <p class="ejemplo">Captura en ejecución: </p>
+                                <img src="./img/1/1.3.3.1.3_2.jpg" alt="">
+
                             <h4>1.3.3.2. Según sea.</h4>
-                            <h4>1.3.4. Estructuras de control repetitivas.</h4>
+                                <p class="ejemplo">Ejemplo (Práctica 1).</p>
+                                <p class="ejemplo">Pseudocódigo:</p><br>
+                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <p class="ejemplo">Código en C:</p>
+                                <p class="ejemplo">Captura en ejecución: </p>
+
+                            <h4 class="sub">1.3.4. Estructuras de control repetitivas.</h4>
                             <h4>1.3.4.1. Contadores, acumuladores y banderas.</h4>
+                                <p class="ejemplo">Ejemplo (Práctica 1).</p>
+                                <p class="ejemplo">Pseudocódigo:</p><br>
+                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <p class="ejemplo">Código en C:</p>
+                                <p class="ejemplo">Captura en ejecución: </p>
+
                             <h4>1.3.4.2. Mientras.</h4>
+                                <p class="ejemplo">Ejemplo (Práctica 1).</p>
+                                <p class="ejemplo">Pseudocódigo:</p><br>
+                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <p class="ejemplo">Código en C:</p>
+                                <p class="ejemplo">Captura en ejecución: </p>
+
                             <h4>1.3.4.3. Hacer-Mientras.</h4>
+                                <p class="ejemplo">Ejemplo (Práctica 1).</p>
+                                <p class="ejemplo">Pseudocódigo:</p><br>
+                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <p class="ejemplo">Código en C:</p>
+                                <p class="ejemplo">Captura en ejecución: </p>
+
                             <h4>1.3.4.4. Desde.</h4>
+                                <p class="ejemplo">Ejemplo (Práctica 1).</p>
+                                <p class="ejemplo">Pseudocódigo:</p><br>
+                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <p class="ejemplo">Código en C:</p>
+                                <p class="ejemplo">Captura en ejecución: </p>
+
                         <h3>1.4. Estructuras anidadas.</h3>
-                            <h4>1.4.1. Definición.</h4>
-                            <h4>1.4.2. Implementación.</h4>
-                    
-                
-                
+                            <h4 class="sub">1.4.1. Definición.</h4>
+                            <h4 class="sub">1.4.2. Implementación.</h4>
+                                <p class="ejemplo">Ejemplo (Práctica 1).</p>
+                                <p class="ejemplo">Pseudocódigo:</p><br>
+                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <p class="ejemplo">Código en C:</p>
+                                <p class="ejemplo">Captura en ejecución: </p>
+
                 </div>
                 <div class="unidad" id="arreglos">
                     <h2>Módulo 2: Arreglos.</h2>
                         <h3>2.1. Definición.</h3>
                         <h3>2.2. Tipos de arreglos.</h3>
-                            <h4>2.2.1. Unidimensionales.</h4>
-                            <h4>2.2.2. Bidimensionales.</h4>
+                            <h4 class="sub">2.2.1. Unidimensionales.</h4>
+                                <p class="ejemplo">Ejemplo (Práctica 1).</p>
+                                <p class="ejemplo">Pseudocódigo:</p><br>
+                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <p class="ejemplo">Código en C:</p>
+                                <p class="ejemplo">Captura en ejecución: </p>
+
+                            <h4 class="sub">2.2.2. Bidimensionales.</h4>
+                                <p class="ejemplo">Ejemplo (Práctica 1).</p>
+                                <p class="ejemplo">Pseudocódigo:</p><br>
+                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <p class="ejemplo">Código en C:</p>
+                                <p class="ejemplo">Captura en ejecución: </p>
+
                 </div>
                 <div class="unidad" id="funciones">
                     <h2>Módulo 3: Manejo de funciones.</h2>
                         <h3>3.1. Definición.</h3>
                         <h3>3.2. Funciones sin paso de párametros.</h3>
+                            <p class="ejemplo">Ejemplo (Práctica 1).</p>
+                                <p class="ejemplo">Pseudocódigo:</p><br>
+                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <p class="ejemplo">Código en C:</p>
+                                <p class="ejemplo">Captura en ejecución: </p>
+
                         <h3>3.3. Funciones con paso de párametros por valor.</h3>
-                            <h4>3.3.1. Funciones con parámetros usando datos primitivos.</h4>
-                            <h4>3.3.2. Funciones con parámetros usando arreglos.</h4>
+                            <h4 class="sub">3.3.1. Funciones con parámetros usando datos primitivos.</h4>
+                                <p class="ejemplo">Ejemplo (Práctica 1).</p>
+                                <p class="ejemplo">Pseudocódigo:</p><br>
+                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <p class="ejemplo">Código en C:</p>
+                                <p class="ejemplo">Captura en ejecución: </p>
+
+                            <h4 class="sub">3.3.2. Funciones con parámetros usando arreglos.</h4>
+                                <p class="ejemplo">Ejemplo (Práctica 1).</p>
+                                <p class="ejemplo">Pseudocódigo:</p><br>
+                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <p class="ejemplo">Código en C:</p>
+                                <p class="ejemplo">Captura en ejecución: </p>
+
                 </div>
                 <div class="unidad" id="registros">
                     <h2>Módulo 4: Registros.</h2>
                         <h3>4.1. Definición.</h3>
                         <h3>4.2. Operaciones con registros.</h3>
-                            <h4>4.2.1. Asignación a los datos de un registro.</h4>
-                            <h4>4.2.2. Salida de datos de un registro.</h4>
+                            <h4 class="sub">4.2.1. Asignación a los datos de un registro.</h4>
+                                <p class="ejemplo">Ejemplo (Práctica 1).</p>
+                                <p class="ejemplo">Pseudocódigo:</p><br>
+                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <p class="ejemplo">Código en C:</p>
+                                <p class="ejemplo">Captura en ejecución: </p>
+
+                            <h4 class="sub">4.2.2. Salida de datos de un registro.</h4>
+                                <p class="ejemplo">Ejemplo (Práctica 1).</p>
+                                <p class="ejemplo">Pseudocódigo:</p><br>
+                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <p class="ejemplo">Código en C:</p>
+                                <p class="ejemplo">Captura en ejecución: </p>
+
                         <h3>4.3. Arreglos con elementos de tipo registro.</h3>
-                            <h4>4.3.1. Definición</h4>
-                            <h4>4.3.2. Operaciones con arreglos de registros</h4>
+                            <h4 class="sub">4.3.1. Definición</h4>
+                            <h4 class="sub">4.3.2. Operaciones con arreglos de registros</h4>
                             <h4>4.3.2.1. Entrada de datos de los elementos de un arreglo de registros.</h4>
+                                <p class="ejemplo">Ejemplo (Práctica 1).</p>
+                                <p class="ejemplo">Pseudocódigo:</p><br>
+                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <p class="ejemplo">Código en C:</p>
+                                <p class="ejemplo">Captura en ejecución: </p>
+
                             <h4>4.3.2.2. Salida de datos de un arreglo de registros..</h4>
+                                <p class="ejemplo">Ejemplo (Práctica 1).</p>
+                                <p class="ejemplo">Pseudocódigo:</p><br>
+                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <p class="ejemplo">Código en C:</p>
+                                <p class="ejemplo">Captura en ejecución: </p>
+
                 </div>
             </div>
         </main>

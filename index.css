@@ -1,41 +1,49 @@
 * {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
     margin: 0;
     padding: 0;
-    color: #f3f0e7;
+    color: rgb(45, 45, 45);
 }
 
 body {
     background-color: #e9e9e9;
 }
 
-h1 {
-    text-transform: uppercase;
-    font-size: 5rem;
-    margin: 0 auto;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+.info b {
+    font-size: 2rem;
 }
 
-#nombre {
-    font-size: 1.75rem;
-    margin: 0 auto;
+.info p {
+    font-size: 2rem;
     text-align: center;
     font-weight: lighter;
 }
 
 .head {
-    background: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.5)), url("./img/c.png");
-    background-position: center;
+    background: linear-gradient(135deg, rgba(222,247,229, 0.75), rgba(146,227,169, 0.75)), url("./img/c.png");
+    display: flex;
+    justify-content: space-around;
+    background-position: top;
     background-size: cover;
     padding: 5rem 0;
-    -webkit-box-shadow: -1px 7px 13px -6px #000000; 
-    box-shadow: -1px 7px 13px -6px #000000;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .flex-main {
     display: flex;
+}
+
+.info {
+    width: 80%;
+    margin-right: 5%;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 6.5rem;
+    margin: auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 main {
@@ -54,14 +62,21 @@ main {
 }
 
 a {
+    font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     color: rgba(0, 131, 92, 1);
+}
+
+#banner {
+    width: 40%;
+    padding-left: 20%;
 }
 
 /*///////////*/
 /* Contenido */
 /*///////////*/
 h2 {
+    font-family: Arial, Helvetica, sans-serif;
     background-color: rgba(0, 131, 92, 1);
     color: #f3f3f3;
     font-size: 4rem;
@@ -72,13 +87,15 @@ h2 {
 }
 
 h3 {
+    font-family: Arial, Helvetica, sans-serif;
     color: rgb(45, 45, 45);
-    font-size: 3rem;
+    font-size: 3.5rem;
     padding-left: 2.5rem;
     margin: 1rem 0;
 }
 
 h4 {
+    font-family: Arial, Helvetica, sans-serif;
     color: rgb(45, 45, 45);
     font-size: 2rem;
     padding-left: 5rem;
@@ -91,7 +108,8 @@ h4 {
     padding: 1rem 5rem 2.5rem 5rem;
 }
 
-p, ul, li{
+main p, ul, li{
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
     text-align: justify;
     padding-left: 5rem;
@@ -108,9 +126,66 @@ ul {
     list-style-position: inside; 
 }
 
-img {
+pre {
+    font-size: 1.5rem;
+    text-align: justify;
+    padding-left: 5rem;
+}
+
+
+main img {
+    width: 80%;
     display: block;
     margin: 1rem auto;
     -webkit-box-shadow: 0px 1px 17px 2px rgba(0,0,0,0.58); 
     box-shadow: 0px 1px 17px 2px rgba(0,0,0,0.58);
+}
+
+.sub {
+    font-size: 2.5rem;
+}
+
+.gist {
+    margin-left: 5rem !important;
+}
+
+.ejemplo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 1200px) {
+    * {
+        font-size: 11px;
+    }
+
+    .lateral {
+        margin: 0;
+        width: 100%;
+        background-color: rgba(0, 131, 92, 1);
+        padding: 2.5rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        color: #e9e9e9;
+    }
+
+    main {
+        margin: 2.5rem auto;
+        width: 80%;
+    }
+    
+    a {
+        color: #e9e9e9;
+        font-size: 1.5rem !important;
+    }
+
+    .img-head {
+        display: none;
+    }
+
+    h1 {
+        margin-top: 5rem;
+    }
 }
