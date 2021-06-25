@@ -189,3 +189,47 @@ main img {
         margin-top: 5rem;
     }
 }
+
+/* TABLA */
+.tabla {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 2.5rem;
+    padding-left: 5rem;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+}
+
+.cell {
+    display: table;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.cell p {
+    display: table-cell;
+    padding: 0;
+    text-align: center;
+    height: 10rem;
+    margin: auto !important;
+    font-size: 2rem;
+    vertical-align: middle;
+}
+
+.cell-img {
+    height: 10rem;
+    width: 30rem;
+    border: 1px solid black;
+}
+
+.cell-img img {
+    height: 80%;
+    width: auto;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.58);
+}
+
+#pseudo .row .cell p {
+    height: 5rem;
+}
