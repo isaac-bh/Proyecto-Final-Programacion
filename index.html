@@ -281,11 +281,16 @@
                             <p>Las estructuras de control, tanto selectivas como repetitivas, no solo pueden convivir solas o entre ellas, si no que se pueden hacer el uso de tantas de estas estructuras como sea necesario para resolver un problema, incluso dentro de otra estructura de control, a la manera en la que se ponen estructuras dentro de otras estructuras se le llama anidación, y puede existir en cualquier estructura de control.</p>
 
                             <h4 class="sub">1.4.2. Implementación.</h4>
-                                <p class="ejemplo">Ejemplo (Práctica 1).</p>
-                                <p class="ejemplo">Pseudocódigo:</p><br>
+                            <p>El caso de uso más común de las estructuras anidadas son las estructuras de repetición anidadas para el manejo de arreglos bidimensionales, los cuales veremos más adelante, aqui se presenta un ejemplo de anidación de estructuras de repetición.</p>
+                                <p class="ejemplo">Ejemplo (Práctica 31).</p>
+                                <p class="ejemplo">Pseudocódigo:</p>
+                                <pre>Librerías<br> Principal<br> Inicio<br>     Entero i, j<br>     Desde (i <- 1; i <= 10; inc i)<br>         Inicio<br>             Imprimir("Tabla de multiplicar del ", i)<br>             Desde (j <- 1; j <= 10; inc j)<br>                 Inicio<br>                     Imprimir(i, "x", j, "=", (i*j))<br>                 Fin<br>         Fin<br>     Regresa(0)<br> Fin</pre>
                                 <p class="ejemplo">Diagrama de flujo:</p>
+                                <img src="./img/1/1.4.2.1.jpg" alt="" style="width: 50%;">
                                 <p class="ejemplo">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/fe926cbe72ef65c1f9d9b57bf47f16ef.js"></script>
                                 <p class="ejemplo">Captura en ejecución: </p>
+                                <img src="./img/1/1.4.2.2.jpg" alt="">
 
                 </div>
                 <div class="unidad" id="arreglos">
