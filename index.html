@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Final Programación</title>
     <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="head">
@@ -24,7 +25,7 @@
             <div class="contenido">
                 <div class="unidad" id="programacion-estructurada">
                     <h2>Módulo 1: Programación estructurada.</h2>
-                        <h3>1.1. Conceptos basicos de programación estructurada.</h3>
+                        <h3 id="unopuntouno">1.1. Conceptos basicos de programación estructurada.</h3>
                             <h4 class="sub">1.1.1. Definición y características de programación estructurada.</h4>
                             <p>
                                 La programación estructurada es una teoria de programación que busca mejorar la claridad, calidad y el tiempo de desarrollo de un programa. <br><br>
@@ -47,7 +48,7 @@
                             </p>
                             <img src="./img/secuencial.png" alt="">
                         <br><br><br>
-                        <h3>1.2. Algoritmo.</h3>
+                        <h3 id="unopuntodos">1.2. Algoritmo.</h3>
                             <h4 class="sub">1.2.1. Definición de Algoritmo.</h4>
                             <p>
                                 Un algoritmo es una serie de instrucciones secuenciales que permiten ejecutar acciones o realizar alguna determinada acción. Sin los algoritmos nadie sabria que hacer, y las acciones que se buscan hacer no se podrian realizar.
@@ -161,7 +162,7 @@
                                 <pre>Principal <br>Inicio <br>    Entero n1, n2, res<br>    Imprimir("Dime dos enteros")<br>    Leer(n1, n2)<br>    res ← n1 + n2<br>    Imprimir("El resultado es: ", res)<br>Fin
                                 </pre>
 
-                        <h3>1.3. Estructuras de control.</h3>
+                        <h3 id="unopuntotres">1.3. Estructuras de control.</h3>
                             <h4 class="sub">1.3.1. Definición.</h4>
                                 <p>Son los métodos que existen dentro de un programa para dirigir la forma en la que se ejecutan las isntrucciones. Estas modifican el flujo de ejecución, manipulandolo para conveniencia del programa.</p>
                             <h4 class="sub">1.3.2. Secuencial.</h4>
@@ -276,7 +277,7 @@
                                 <p class="ejemplo">Captura en ejecución: </p>
                                 <img src="./img/1/1.3.4.4.2.jpg" alt="">
 
-                        <h3>1.4. Estructuras anidadas.</h3>
+                        <h3 id="unopuntocuatro">1.4. Estructuras anidadas.</h3>
                             <h4 class="sub">1.4.1. Definición.</h4>
                             <p>Las estructuras de control, tanto selectivas como repetitivas, no solo pueden convivir solas o entre ellas, si no que se pueden hacer el uso de tantas de estas estructuras como sea necesario para resolver un problema, incluso dentro de otra estructura de control, a la manera en la que se ponen estructuras dentro de otras estructuras se le llama anidación, y puede existir en cualquier estructura de control.</p>
 
@@ -295,9 +296,9 @@
                 </div>
                 <div class="unidad" id="arreglos">
                     <h2>Módulo 2: Arreglos.</h2>
-                        <h3>2.1. Definición.</h3>
+                        <h3 id="dospuntouno">2.1. Definición.</h3>
                         <p>Un arreglo es una variable que provee la opción de disponer de varios datos o espacio para datos a los cuales se puede acceder y se manejan con un mismo identificador, este tipo de variable a pesar de que guarda varios datos, permite la utilización individual de sus elementos, guarda todos sus elementos en espacios continuos en memoria.</p>
-                        <h3>2.2. Tipos de arreglos.</h3>
+                        <h3  id="dospuntodos">2.2. Tipos de arreglos.</h3>
                             <h4 class="sub">2.2.1. Unidimensionales.</h4>
                             <p>Los arreglos unidimensionales son variables estructuradas formadas con un número "n" de variables simples del mismo tipo que son denominadas elementos del arreglo. El número de componentes "n" es la dimensión del arreglo. En programación a este tipo de arreglos tambien se le conocen como vectores.</p>
                             <br><p><b>Estructura de un vector de 5 elementos: </b></p>
@@ -421,7 +422,7 @@
                 </div>
                 <div class="unidad" id="funciones">
                     <h2>Módulo 3: Manejo de funciones.</h2>
-                        <h3>3.1. Definición.</h3>
+                        <h3 id="trespuntouno">3.1. Definición.</h3>
                         <p>En el lenguaje de programación C, una función es el equivalente a lo que es una subrutina en otros lenguajes de programación. Es una forma conveniente de encapsular o aislar algunos cálculos o algún procedimiento, los cuales se pueden emplear despúes. Las funciones se diseñan para cumplir con una tarea especifica y para tener un código más modulado y organizado.</p>
                         <p>Las funciones en el lenguaje C pueden aparecer en cualquier orden y en uno o varios archivos fuente, pero una función no puede separarse, ni en el mismo archivo ni en diferentes.</p>
                         <p>Al igual que las variables, las funciones también necesitan ser declaradas. Lo que se les conoce como prototipo de una función. Esto solo se necesita hacer si las funciones fueron declaradas después de la función principal.</p>
@@ -434,7 +435,7 @@
                         <p>Cuando una variable es transferida de una función a otra, normalmente se transfiere "por valor", es decir, que la función que es invocada recibe los valores de sus argumentos en variables temporales y no en las originales. Una función que es invocada en el lenguaje C no puede modificar el valor de una variable que esta en la función que la invocó, unicamente puede modificar su copia privada y temporal.</p>
 
 
-                        <h3>3.2. Funciones sin paso de párametros.</h3>
+                        <h3 id="trespuntodos">3.2. Funciones sin paso de párametros.</h3>
                         <p>Las funciones sin paso de párametros son aquellas que no reciben ningún valor de entrada cuando es invocada, únicamente ejecuta el código que contiene dentro de la función y puede regresar un valor a la función que la invocó.</p>
                             <p class="ejemplo">Ejemplo (Práctica 52).</p>
                                 <p class="ejemplo">Pseudocódigo:</p>
@@ -444,7 +445,7 @@
                                 <p class="ejemplo">Captura en ejecución: </p>
                                 <img src="./img/3/3.2.jpg" alt="">
 
-                        <h3>3.3. Funciones con paso de párametros por valor.</h3>
+                        <h3 id="trespuntotres">3.3. Funciones con paso de párametros por valor.</h3>
                         <p>Las funciones con paso de párametros son aquellas que reciben uno o más valores en el momento en el que son invocadas, esto con el proposito de realizar un proceso con esos datos o un proceso condicionado al valor de esos datos.</p>
                         <p>Existen dos tipos de paso de párametros, el paso de párametros por valor y el paso de párametros por referencia.</p>
                         <br>
@@ -474,7 +475,7 @@
                 </div>
                 <div class="unidad" id="registros">
                     <h2>Módulo 4: Registros.</h2>
-                        <h3>4.1. Definición.</h3>
+                        <h3 id="cuatropuntouno">4.1. Definición.</h3>
                         <p>En el lenguaje C, los registros son una colección de una o más variables, de tipos posiblemente diferentes, las cuales son agrupadas bajo un solo nombre para manejo conveniente. Los registros, en el lenguaje C son también conocidos como estructuras. Los registros ayudan a organizar datos complicados, en particular dentro de programas grandes, debido a que permiten que a un grupo de variables relacionadas se les trate como una unidad en lugar de como entidades separadas. Los registros pueden ser copiados, se puede obtener su dirección en memoria, se puede acceder a los valores de sus miembros, y por ende, pueden ser pasados como parámetros o también ser regresados por una función. Los registros fueron diseñados para que los programadores pudieran crear su “propio tipo de dato”, el cual se ajusta a necesidades, en lenguaje C, los registros es lo que mas se acerca a una tabla en una base de datos.</p>
                         <p>El modificador typedef nos permite definir a una estructura como un tipo de dato nuevo para el lenguaje C, se necesita especificar que nombre se le asignara al nuevo tipo de dato.</p>
                         <br>
@@ -491,7 +492,7 @@
                         <p><b>Arreglos de registros: </b>Este tipo de registro funciona al igual que un registro de datos primitivos. Al igual que un arreglo normal este nos permite juntar varios datos del mismo tipo en el mismo identificador y accediendo a estos a través de un índice, solo que en este caso es un tipo de dato que nosotros mismos definimos.</p>
                         <br>
                         <pre>typedef struct {<br>    char fecha[50];<br>    int quincena;<br>    struct Empleado{<br>        char nombre[50];<br>        int sexo;<br>        char rfc[13];<br>        char domicilio[100];<br>    } empleados[10];<br>    int bonos;<br>    int fondoDeAhorro;<br>} Nomina;</pre>
-                        <h3>4.2. Operaciones con registros.</h3>
+                        <h3 id="cuatropuntodos">4.2. Operaciones con registros.</h3>
                             <h4 class="sub">4.2.1. Asignación a los datos de un registro.</h4>
                             <p>Existen dos maneras basicas de asignar datos a los registros, en una se trabaja con registros que son declarados globalmente o localmente pero fueron declarados en la misma función que se esta modificando. Y en la segunda manera se trabaja con direcciones de memoria para transferir registros entre funciones.</p>
                             <br>
@@ -522,7 +523,7 @@
                                 <p class="ejemplo" style="margin-top: 0 !important;">Código en C:</p>
                                 <script src="https://gist.github.com/isaac-bh/d0296b4752eb376060bcf10321860471.js"></script>
 
-                        <h3>4.3. Arreglos con elementos de tipo registro.</h3>
+                        <h3 id="cuatropuntotres">4.3. Arreglos con elementos de tipo registro.</h3>
                             <h4 class="sub">4.3.1. Definición</h4>
                             <p>Los arreglos con elementos de tipo registro son una colección de varias entidades relacionadas que tienen algo en común y las cuales, cada una guarda varios datos que pueden ser de diferentes tipos, o tambien pueden guardar otros registros. Estos son agrupados en un solo identificador y se accede a ellos gracias a un índice.</p>
                             <p>También se les conoce como una expansión lateral de las estructuras simples o estructuras anidadas, ya que se pasa de guardar un solo valor en cada campo a guardar varios datos con la misma estructura sin declarar varios alias.</p>
@@ -560,10 +561,34 @@
         </main>
         <aside>
             <div class="lateral">
-                <a href="">Módulo 1: Programación estructurada</a>
+                <p id="modulo1-texto">Módulo 1: Programación estructurada <span id="m1-sim">↓</span> </p>
+                <div id="modulo1">
+                    <a href="#unopuntouno">1.1. Conceptos basicos de programación estructurada.</a>
+                    <a href="#unopuntodos">1.2. Algoritmo.</a>
+                    <a href="#unopuntotres">1.3. Estructuras de control.</a>
+                    <a href="#unopuntocuatro">1.4. Estructuras anidadas.</a>
+                </div>
+                <p id="modulo2-texto">Módulo 2: Arreglos <span id="m2-sim">↓</span> </p>
+                <div id="modulo2">
+                    <a href="#dospuntouno">2.1. Definición.</a>
+                    <a href="#dospuntodos">2.2. Tipos de arreglos.</a>
+                </div>
+                <p id="modulo3-texto">Módulo 3: Manejo de funciones <span id="m3-sim">↓</span> </p>
+                <div id="modulo3">
+                    <a href="#trespuntouno">3.1. Definición.</a>
+                    <a href="#trespuntodos">3.2. Funciones sin paso de párametros.</a>
+                    <a href="#trespuntotres">3.3. Funciones con paso de párametros por valor.</a>
+                </div>
+                <p id="modulo4-texto">Módulo 4: Registros <span id="m4-sim">↓</span> </p>
+                <div id="modulo4">
+                    <a href="#cuatropuntouno">4.1. Definición.</a>
+                    <a href="#cuatropuntodos">4.2. Operaciones con registros.</a>
+                    <a href="#cuatropuntotres">4.3. Arreglos con elementos de tipo registro.</a>
+                </div>
             </div>
         </aside>
     </div>
 
 </body>
+<script src="./js/efectos.js"></script>
 </html>
