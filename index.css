@@ -233,3 +233,11 @@ main img {
 #pseudo .row .cell p {
     height: 5rem;
 }
+
+#unidimensional {
+    margin-top: 1rem !important;
+}
+
+#unidimensional .row .cell p {
+    height: 3rem;
+}

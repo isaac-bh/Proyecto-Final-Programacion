@@ -296,63 +296,197 @@
                 <div class="unidad" id="arreglos">
                     <h2>Módulo 2: Arreglos.</h2>
                         <h3>2.1. Definición.</h3>
+                        <p>Un arreglo es una variable que provee la opción de disponer de varios datos o espacio para datos a los cuales se puede acceder y se manejan con un mismo identificador, este tipo de variable a pesar de que guarda varios datos, permite la utilización individual de sus elementos, guarda todos sus elementos en espacios continuos en memoria.</p>
                         <h3>2.2. Tipos de arreglos.</h3>
                             <h4 class="sub">2.2.1. Unidimensionales.</h4>
-                                <p class="ejemplo">Ejemplo (Práctica 1).</p>
-                                <p class="ejemplo">Pseudocódigo:</p><br>
-                                <p class="ejemplo">Diagrama de flujo:</p>
+                            <p>Los arreglos unidimensionales son variables estructuradas formadas con un número "n" de variables simples del mismo tipo que son denominadas elementos del arreglo. El número de componentes "n" es la dimensión del arreglo. En programación a este tipo de arreglos tambien se le conocen como vectores.</p>
+                            <br><p><b>Estructura de un vector de 5 elementos: </b></p>
+                            <div class="tabla" id="unidimensional">
+                                <div class="row">
+                                    <div class="cell" style="background-color: rgba(0, 131, 92, 1);"><p style="color: #e9e9e9;">Índice</p></div>
+                                    <div class="cell"><p>0</p></div>
+                                    <div class="cell"><p>1</p></div>
+                                    <div class="cell"><p>2</p></div>
+                                    <div class="cell"><p>3</p></div>
+                                    <div class="cell"><p>4</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell" style="background-color: rgba(0, 131, 92, 1);"><p style="color: #e9e9e9;">Valor</p></div>
+                                    <div class="cell"><p>7</p></div>
+                                    <div class="cell"><p>88</p></div>
+                                    <div class="cell"><p>14</p></div>
+                                    <div class="cell"><p>0</p></div>
+                                    <div class="cell"><p>45</p></div>
+                                </div>
+                            </div>
+
+                            <p class="ejemplo">Ejemplo (Práctica 37).</p>
+                            <p class="ejemplo">Pseudocódigo:</p>
+                                <pre>Librerías<br>Principal<br>Inicio<br>    Entero array[15], mayor ← 0, i<br>    Desde (i ← 0; i < 15; inc i)<br>        Inicio<br>            Imprimir("Por favor ingresa el elemento", i)<br>            Leer(array[i])<br>        Fin<br>    Desde (i ← 0; i < 15; inc i)<br>        Inicio<br>            Si (array[i] > mayor)<br>                mayor ← array[i]<br>        Fin<br>    Imprimir("El elemento mayor es: ", mayor)<br>Fin</pre>
                                 <p class="ejemplo">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/d65f57af46a232ca733af54c176b3a3b.js"></script>
                                 <p class="ejemplo">Captura en ejecución: </p>
+                                <img src="./img/2/2.2.1.jpg" alt="">
+                            
+                            <p>Existe un tipo de arreglo unidimensional que se utiliza para poder suplir lo que en otros lenguajes de programación se conoce como el tio de dato String, las cadenas o cadenas de carácter. <br>La única diferencia entre los arreglos y las cadenas de carácter es que las cadenas se pueden manipular de manera individual y de manera conjunta, puedes imprimir un solo carácter de la cadena o la cadena completa.</p>
+                            <br><p><b>Estructura de una cadena de 5 elementos: </b></p>
+                            <div class="tabla" id="unidimensional">
+                                <div class="row">
+                                    <div class="cell" style="background-color: rgba(0, 131, 92, 1);"><p style="color: #e9e9e9;">Índice</p></div>
+                                    <div class="cell"><p>0</p></div>
+                                    <div class="cell"><p>1</p></div>
+                                    <div class="cell"><p>2</p></div>
+                                    <div class="cell"><p>3</p></div>
+                                    <div class="cell"><p>4</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell" style="background-color: rgba(0, 131, 92, 1);"><p style="color: #e9e9e9;">Valor</p></div>
+                                    <div class="cell"><p>H</p></div>
+                                    <div class="cell"><p>O</p></div>
+                                    <div class="cell"><p>L</p></div>
+                                    <div class="cell"><p>A</p></div>
+                                    <div class="cell"><p>\0</p></div>
+                                </div>
+                            </div>
+
+                            <p class="ejemplo">Ejemplo (Práctica 46).</p>
+                            <p class="ejemplo">Pseudocódigo:</p>
+                            <pre>Librerias<br>Principal<br>Inicio<br>    Caracter cadena[26]<br>    Entero total<br>    Imprimir("Introduce una oración (máx. 25 carácteres): ")<br>    Leercad(cadena)<br>    total <- Longitud_de_cadena(cadena)<br>    Imprimir("La longitud de la cadena es: ", total)<br>Fin</pre>
+                            <p class="ejemplo">Código en C:</p>
+                            <script src="https://gist.github.com/isaac-bh/b7ab6a6c96d4645b8e973db47b49cea1.js"></script>
+                            <p class="ejemplo">Captura en ejecución: </p>
+                            <img src="./img/2/2.2.1.1.png" alt="">
 
                             <h4 class="sub">2.2.2. Bidimensionales.</h4>
-                                <p class="ejemplo">Ejemplo (Práctica 1).</p>
-                                <p class="ejemplo">Pseudocódigo:</p><br>
-                                <p class="ejemplo">Diagrama de flujo:</p>
+                            <p>Los arreglos bidimensionales son un tipo de variable estructurada formada de un número "n" de celdas por un número "m" de filas. Tambien se podria decir que son varios arreglos unidimensionales unidos. Este tipo de arreglos utiliza dos índices para ubicar a los datos, el número de fila y el número de celda. Tambien se les denominan matrices.</p>
+                            <br><p><b>Estructura de una matriz de 5x5: </b></p>
+                            <div class="tabla" id="unidimensional">
+                                <div class="row">
+                                    <div class="cell" style="background-color: rgba(0, 131, 92, 1);"><p style="color: #e9e9e9;">Índice</p></div>
+                                    <div class="cell" style="background-color: rgba(0, 131, 92, 1);"><p style="color: #e9e9e9;">0</p></div>
+                                    <div class="cell" style="background-color: rgba(0, 131, 92, 1);"><p style="color: #e9e9e9;">1</p></div>
+                                    <div class="cell" style="background-color: rgba(0, 131, 92, 1);"><p style="color: #e9e9e9;">2</p></div>
+                                    <div class="cell" style="background-color: rgba(0, 131, 92, 1);"><p style="color: #e9e9e9;">3</p></div>
+                                    <div class="cell" style="background-color: rgba(0, 131, 92, 1);"><p style="color: #e9e9e9;">4</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell" style="background-color: rgba(0, 131, 92, 1);"><p style="color: #e9e9e9;">0</p></div>
+                                    <div class="cell"><p>7</p></div>
+                                    <div class="cell"><p>88</p></div>
+                                    <div class="cell"><p>14</p></div>
+                                    <div class="cell"><p>0</p></div>
+                                    <div class="cell"><p>45</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell" style="background-color: rgba(0, 131, 92, 1);"><p style="color: #e9e9e9;">1</p></div>
+                                    <div class="cell"><p>25</p></div>
+                                    <div class="cell"><p>50</p></div>
+                                    <div class="cell"><p>75</p></div>
+                                    <div class="cell"><p>100</p></div>
+                                    <div class="cell"><p>0</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell" style="background-color: rgba(0, 131, 92, 1);"><p style="color: #e9e9e9;">2</p></div>
+                                    <div class="cell"><p>13</p></div>
+                                    <div class="cell"><p>39</p></div>
+                                    <div class="cell"><p>57</p></div>
+                                    <div class="cell"><p>82</p></div>
+                                    <div class="cell"><p>91</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell" style="background-color: rgba(0, 131, 92, 1);"><p style="color: #e9e9e9;">3</p></div>
+                                    <div class="cell"><p>12</p></div>
+                                    <div class="cell"><p>3</p></div>
+                                    <div class="cell"><p>7</p></div>
+                                    <div class="cell"><p>82</p></div>
+                                    <div class="cell"><p>92</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell" style="background-color: rgba(0, 131, 92, 1);"><p style="color: #e9e9e9;">4</p></div>
+                                    <div class="cell"><p>48</p></div>
+                                    <div class="cell"><p>12</p></div>
+                                    <div class="cell"><p>677</p></div>
+                                    <div class="cell"><p>99</p></div>
+                                    <div class="cell"><p>101</p></div>
+                                </div>
+                            </div>
+                                <p class="ejemplo">Ejemplo (Práctica 44).</p>
+                                <p class="ejemplo">Pseudocódigo:</p>
+                                <pre>Librerías<br>Principal<br>Inicio<br>    Entero i, j, k<br>    Real a[3][3], b[3][3], c[3][3], suma<br>    Desde (i ← 0; i < 3; inc i)<br>    Inicio<br>        Desde (j ← 0; j < 3; inc j)<br>        Inicio<br>            Imprimir("Por favor ingresa el elemento ", i + 1, j + 1, "de la matriz A:")<br>            Leer(a[i][j])<br>            Imprimir("Por favor ingresa el elemento ", i + 1, j + 1, "de la matriz B:")<br>            Leer(b[i][j])<br>        Fin<br>    Fin<br>    <br>    Desde (i ← 0; i < 3; inc i)<br>    Inicio<br>        Desde (j ← 0; j < 3; inc j)<br>        Inicio<br>            c[i][j] ← 0<br>            Desde (k ← 0; k < 3; inc k)<br>                c[i][j] ← (c[i][j] + (a[i][k] * b[k][j])) <br>        Fin<br>    Fin<br><br>    Desde (i ← 0; i < 3; inc i)<br>    Inicio<br>        Desde (j ← 0; j < 3; inc j)<br>            Imprimir(c[i][j])<br>        Imprimir(\n)<br>    Fin<br>Fin</pre>
                                 <p class="ejemplo">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/5413a08f1dd14b075e4f6a9719272a95.js"></script>
                                 <p class="ejemplo">Captura en ejecución: </p>
+                                <img src="./img/2/2.2.2.jpg" alt="">
 
                 </div>
                 <div class="unidad" id="funciones">
                     <h2>Módulo 3: Manejo de funciones.</h2>
                         <h3>3.1. Definición.</h3>
+                        <p>En el lenguaje de programación C, una función es el equivalente a lo que es una subrutina en otros lenguajes de programación. Es una forma conveniente de encapsular o aislar algunos cálculos o algún procedimiento, los cuales se pueden emplear despúes. Las funciones se diseñan para cumplir con una tarea especifica y para tener un código más modulado y organizado.</p>
+                        <p>Las funciones en el lenguaje C pueden aparecer en cualquier orden y en uno o varios archivos fuente, pero una función no puede separarse, ni en el mismo archivo ni en diferentes.</p>
+                        <p>Al igual que las variables, las funciones también necesitan ser declaradas. Lo que se les conoce como prototipo de una función. Esto solo se necesita hacer si las funciones fueron declaradas después de la función principal.</p>
+                        <br>
+                        <p><b>Parámetros:</b></p>
+                        <p>Los parámetros son las variables nombradas en la lista entre paréntesis de la definición de una función. Los parámetros deben ser declarados con su tipo de dato y su respectivo identificador. Es posible no especificar exactamente la cantidad de parámetros que recibirá la función, para esto es necesario poner una coma seguida de tres puntos (,...), esto le indica al compiladorr que puede que pasen más argumentos a la función, pero no se le proporciona más información acerca de ellos.</p>
+                        <br>
+                        <p><b>Variables y sus alcances:</b></p>
+                        <p>Las variables que son declaradas dentro de una función comienzan a existir desde el momento en el que se invoca a la función y son borradas de memoria cuando la función termina, estas son llamadas variables locales. <br>Como alternativa de las variables locales, se pueden declarar variables externas o globales, las cuales son accesibles desde cualquier parte del programa.</p>
+                        <p>Cuando una variable es transferida de una función a otra, normalmente se transfiere "por valor", es decir, que la función que es invocada recibe los valores de sus argumentos en variables temporales y no en las originales. Una función que es invocada en el lenguaje C no puede modificar el valor de una variable que esta en la función que la invocó, unicamente puede modificar su copia privada y temporal.</p>
+
+
                         <h3>3.2. Funciones sin paso de párametros.</h3>
-                            <p class="ejemplo">Ejemplo (Práctica 1).</p>
-                                <p class="ejemplo">Pseudocódigo:</p><br>
-                                <p class="ejemplo">Diagrama de flujo:</p>
+                        <p>Las funciones sin paso de párametros son aquellas que no reciben ningún valor de entrada cuando es invocada, únicamente ejecuta el código que contiene dentro de la función y puede regresar un valor a la función que la invocó.</p>
+                            <p class="ejemplo">Ejemplo (Práctica 52).</p>
+                                <p class="ejemplo">Pseudocódigo:</p>
+                                <pre>Librerías<br>Raiz()<br>Inicio<br>    Real num, res<br>    Imprimir("Ingresa el número que se le desea aplicar la raíz cuadrada: ")<br>    Leer(num)<br>    res <- Raizcuad(num)<br>    Regresa res<br>Fin<br><br>Potencia()<br>Inicio<br>    Real num, res, potencia<br>    Imprimir("Ingresa el número que se le desea aplicar la potencia: ")<br>    Leer(num)<br>    Imprimir("Ingresa la potencia deseada: ")<br>    Leer(potencia)<br>    res <- num ^ potencia<br>    Regresar res<br>Fin<br><br>Coseno()<br>Inicio<br>    Real num, res<br>    Imprimir("Ingresa el número que se desea calcular el coseno: ")<br>    Leer(num)<br>    res <- cos(num)<br>    Regresa res<br>Fin<br><br>logaritmoNatural()<br>Inicio<br>    Real num, res<br>    Imprimir("Ingresa el número que se desea calcular el logaritmo natural: ")<br>    Leer(num)<br>    res <- log(num)<br>    Regresa res<br>Fin<br><br>Principal()<br>Inicio<br>    Entero menu <- 1, opc<br>    Hacer<br>        Inicio<br>            Imprimir("Bienvenido!, Que operación quieres realizar?")<br>            Imprimir("1. Raíz Cuadrada 2. Potencia de un numero 3. Coseno de un numero 4. Logaritmo natural<br>            de un número. 5. Salir del programa");<br>            Imprimir("Ingresa el numero de la opción: ");<br>            Leer(opc)<br>            Según sea ()<br>            Inicio<br>                Caso 1:<br>                    Imprimir("La raíz es: ", Raiz())<br>                    Interrumpir<br>                Caso 2:<br>                    Imprimir("La potencia es: ", Potencia())<br>                    Interrumpir<br>                Caso 3:<br>                    Imprimir("El coseno es: ", Coseno())<br>                    Interrumpir<br>                Caso 4:<br>                    Imprimir("El logaritmo natural es: ", logaritmoNatural())<br>                    Interrumpir<br>                Caso 5:<br>                    Imprimir("Adiós")<br>                    Interrumpir<br>                Otro:<br>                    Imprimir("Opción inexistente")<br>                    Interrumpir<br>            Fin<br>        Fin<br>    Mientras(menu = 1)<br>    Regresa 0<br>Fin</pre>
                                 <p class="ejemplo">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/5613c4eedad921b6d3dbedb1f18e310b.js"></script>
                                 <p class="ejemplo">Captura en ejecución: </p>
+                                <img src="./img/3/3.2.jpg" alt="">
 
                         <h3>3.3. Funciones con paso de párametros por valor.</h3>
+                        <p>Las funciones con paso de párametros son aquellas que reciben uno o más valores en el momento en el que son invocadas, esto con el proposito de realizar un proceso con esos datos o un proceso condicionado al valor de esos datos.</p>
+                        <p>Existen dos tipos de paso de párametros, el paso de párametros por valor y el paso de párametros por referencia.</p>
+                        <br>
+                        <p><b>Por valor: </b>En este tipo de paso de párametros los valores de las variables son copiados en un grupo de variables locales dentro de la función, por lo que si se modifica el valor de estas, no tendra impacto en las variables originales. Los datos primitivos como Int, Float, Double y Char utilizan este método de paso de párametros.</p>
+                        <br>
+                        <p><b>Por referencia: </b>En este tipo de paso de párametros las variables no son pasadas del todo, si no que se pasa la dirección en memoria hacia la función y ya en esta se utiliza la dirección que le fue proporcionada para guardar datos, es todo lo contrario al anterior método, ya que esta si modifica el valor de las variables originales. Los datos de tipo arreglo utilizan este método de paso de párametros.</p>
                             <h4 class="sub">3.3.1. Funciones con parámetros usando datos primitivos.</h4>
-                                <p class="ejemplo">Ejemplo (Práctica 1).</p>
-                                <p class="ejemplo">Pseudocódigo:</p><br>
-                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <p class="ejemplo">Ejemplo (Práctica 54).</p>
+                                <p class="ejemplo">Pseudocódigo:</p>
+                                <pre>Librerías<br>Entero factorial(Entero fact)<br>Inicio<br>    Entero contador, total <- 1<br>    contador <- factorial<br>    Hacer<br>        Inicio<br>            total <- total * contador<br>            dec contador<br>        Fin<br>    Mientras (contador >= 1)<br>    Regresa total<br>Fin<br><br>Entero Principal()<br>Inicio<br>    Entero fact<br>    Imprimir("Ingrese el factorial a calcular: ")<br>    Leer(fact)<br>    Imprimir("El factorial del número que elegiste es: ", factorial(fact))<br>    Regresa 0<br>Fin</pre>
                                 <p class="ejemplo">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/81f0612f4df62b1aa9e31703dbf8936d.js"></script>
                                 <p class="ejemplo">Captura en ejecución: </p>
-
+                                <img src="./img/3/3.3.1.jpg" alt="">
+                                
+                                
                             <h4 class="sub">3.3.2. Funciones con parámetros usando arreglos.</h4>
-                                <p class="ejemplo">Ejemplo (Práctica 1).</p>
-                                <p class="ejemplo">Pseudocódigo:</p><br>
-                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <p class="ejemplo">Ejemplo (Práctica 60).</p>
+                                <p class="ejemplo">Pseudocódigo:</p>
+                                <pre>Librerías<br>Constante TAM 100<br><br>Entero ordenar (entero n, entero x[])<br><br>Principal<br>Inicio<br>    Entero i, n, x[TAM]<br>    Imprimir("¿Cuántos números serán introducidos?")<br>    Leer(n)<br>    Desde(i <- 0; i < n; inc i)<br>    Inicio<br>        Imprimir("i = ", i + 1, "x = ")<br>        Leer(x[i])<br>    Fin<br>    ordenar(n, x)<br>    Imprimir("Lista de números ordenada")<br>    Desde (i <- 0; i < n; inc i)<br>        Imprimir("i = ", i + 1, "x = ", x[i])<br>    Regresa(0)<br>Fin<br><br>Entero ordenar(Entero n, Entero x[])<br>Inicio<br>    Entero i, elem, temp<br>    Desde(elem <- 0; elem < n - 1; inc elem)<br>    Inicio<br>        Desde(i <- elem + 1; i < n; inc i)<br>        Inicio<br>            Si (x[i] < x[elem])<br>            Inicio<br>                temp <- x[elem]<br>                x[elem] <- x[i]<br>                x[i] <- temp<br>            Fin<br>        Fin<br>    Fin<br>    Regresa(0)<br>Fin</pre>
                                 <p class="ejemplo">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/4577131f2f98d7d9d9983f2714c9b8cd.js"></script>
                                 <p class="ejemplo">Captura en ejecución: </p>
+                                <img src="./img/3/3.3.2.jpg" alt="">
+
 
                 </div>
                 <div class="unidad" id="registros">
                     <h2>Módulo 4: Registros.</h2>
                         <h3>4.1. Definición.</h3>
+                        <p>En el lenguaje C, los registros son una colección de una o más variables, de tipos posiblemente diferentes, las cuales son agrupadas bajo un solo nombre para manejo conveniente. Los registros, en el lenguaje C son también conocidos como estructuras. Los registros ayudan a organizar datos complicados, en particular dentro de programas grandes, debido a que permiten que a un grupo de variables relacionadas se les trate como una unidad en lugar de como entidades separadas. Los registros pueden ser copiados, se puede obtener su dirección en memoria, se puede acceder a los valores de sus miembros, y por ende, pueden ser pasados como parámetros o también ser regresados por una función. Los registros fueron diseñados para que los programadores pudieran crear su “propio tipo de dato”, el cual se ajusta a necesidades, en lenguaje C, los registros es lo que mas se acerca a una tabla en una base de datos.
+                            </p>
                         <h3>4.2. Operaciones con registros.</h3>
                             <h4 class="sub">4.2.1. Asignación a los datos de un registro.</h4>
                                 <p class="ejemplo">Ejemplo (Práctica 1).</p>
-                                <p class="ejemplo">Pseudocódigo:</p><br>
-                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <p class="ejemplo">Pseudocódigo:</p>
                                 <p class="ejemplo">Código en C:</p>
                                 <p class="ejemplo">Captura en ejecución: </p>
 
                             <h4 class="sub">4.2.2. Salida de datos de un registro.</h4>
                                 <p class="ejemplo">Ejemplo (Práctica 1).</p>
-                                <p class="ejemplo">Pseudocódigo:</p><br>
-                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <p class="ejemplo">Pseudocódigo:</p>
                                 <p class="ejemplo">Código en C:</p>
                                 <p class="ejemplo">Captura en ejecución: </p>
 
@@ -361,15 +495,13 @@
                             <h4 class="sub">4.3.2. Operaciones con arreglos de registros</h4>
                             <h4>4.3.2.1. Entrada de datos de los elementos de un arreglo de registros.</h4>
                                 <p class="ejemplo">Ejemplo (Práctica 1).</p>
-                                <p class="ejemplo">Pseudocódigo:</p><br>
-                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <p class="ejemplo">Pseudocódigo:</p>
                                 <p class="ejemplo">Código en C:</p>
                                 <p class="ejemplo">Captura en ejecución: </p>
 
                             <h4>4.3.2.2. Salida de datos de un arreglo de registros..</h4>
                                 <p class="ejemplo">Ejemplo (Práctica 1).</p>
-                                <p class="ejemplo">Pseudocódigo:</p><br>
-                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <p class="ejemplo">Pseudocódigo:</p>
                                 <p class="ejemplo">Código en C:</p>
                                 <p class="ejemplo">Captura en ejecución: </p>
 
