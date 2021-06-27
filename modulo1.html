@@ -1,0 +1,339 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final Programación</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="head">
+        <div class="img-head">
+            <img id="banner" src="./img/cod.png" alt="">
+        </div>
+        <div class="info">
+            <a href="./index.html"><h1>Proyecto Final: Programación.</h1></a>
+            <p><b>Realizado por:</b> Benavides Hernandez Isaac Alain</p>
+            <p><b>Sección:</b> D24</p>
+            <p><b>NRC:</b> 42556</p>
+            <p><b>Horario:</b> Martes y Jueves de 11 AM a 1 PM.</p>
+        </div>
+    </div>
+    <div class="flex-main">
+        <main>
+            <div class="contenido">
+                <div class="unidad" id="programacion-estructurada">
+                    <h2>Módulo 1: Programación estructurada.</h2>
+                        <h3 id="unopuntouno">1.1. Conceptos basicos de programación estructurada.</h3>
+                            <h4 class="sub">1.1.1. Definición y características de programación estructurada.</h4>
+                            <p>
+                                La programación estructurada es una teoria de programación que busca mejorar la claridad, calidad y el tiempo de desarrollo de un programa. <br><br>
+                                A los finales de los años 70 surgió esta forma de programar, propuesta por Bohm-Jacopini quien decia que era posible escribir todos los programas y aplicaciones posibles utilizando solo 3 estructuras de control fundamentales. Dejando fuera a la instrucción de transferencia incondicional (GOTO). <br><br>
+                                Esta tecnica de programación conduce a mejorar la claridad, calidad y tiempo de desarrollo de un programa. 
+                            </p>
+
+                            <h4 class="sub">1.1.2. Elementos básicos de programación estructurada.</h4>
+                            <p>
+                                Como ya se menciono anteriormente, en la programación estructurada se utilizan solo 3 estructuras de control para evitar los problemas que generaba la instrucción de transferencia incondicional, estas tres estructuras son las siguientes:
+                                <ul>
+                                    <li><b>Estructuras secuenciales:</b> Esta estructura se utiliza para que las instrucciones de un programa se ejecuten una después de la otra.</li>
+                                    <li><b>Estructuras condicionales:</b> Esta estructura plantea la selección de instrucciones entre varias opciones dependiendo del valor de una condición, cierto o falso o tambien dependiendo del valor de una variable.</li>
+                                    <li><b>Estructuras repetitivas:</b> Esta estructura ejecuta un conjunto de instrucciones repetidamente hasta que una condición sea cumplida, o mientras una condición sea verdadrea, dependiendo de la estructura de repetición.</li>
+                                </ul>
+                                <br>
+                                <p>
+                                    Estas estructuras no necesitan estar aisladas unas de otras, pueden estar juntas o anidadas, cualquiera de ellas.
+                                </p>
+                            </p>
+                            <img src="./img/secuencial.png" alt="">
+                        <br><br><br>
+                        <h3 id="unopuntodos">1.2. Algoritmo.</h3>
+                            <h4 class="sub">1.2.1. Definición de Algoritmo.</h4>
+                            <p>
+                                Un algoritmo es una serie de instrucciones secuenciales que permiten ejecutar acciones o realizar alguna determinada acción. Sin los algoritmos nadie sabria que hacer, y las acciones que se buscan hacer no se podrian realizar.
+                            </p>
+                            <p>
+                                Especificamente en el desarrollo de software existen dos tipos de algoritmos:
+                                <ul>
+                                    <li><b>Cuantitativos: </b>son aquellos cuya resolución depende de un cálculo matemático.</li>
+                                    <li><b>Cualitativo: </b>la resolución de estos no depende de cálculos numéricos, sino de secuencias lógicas.</li>
+                                </ul>
+                            </p>
+                            <h4 class="sub">1.2.2. Tecnicas para la formulación de algoritmos.</h4>
+                            <p>En el proceso de desarrollo de software se utilizan principalmente las siguientes dos tecnicas para clarificar el proceso que se debe de llevar:</p>
+                            
+                            <h4>1.2.2.1. Diagramas de flujo</h4>
+                            <p>Un diagrama de flujo es la representación gráfica de un algoritmo. También se puede decir que es la representación detallada en forma gráfica de como deben realizarse los pasos en la computadora para producir resultados. Describen un proceso, sistema o algoritmo informático. Se usan ampliamente en varios campos para documentar, estudiar, planificar, mejorar y comunicar procesos que suelen ser complejos.</p>
+                            <p>A continuación se muestra una tabla de las estructuras utilizadas en los diagramas de flujo.</p>
+                            <div class="tabla">
+                                <div class="row">
+                                    <div class="cell-img"><img src="./img/1/1.2.2.1.gif" alt=""></div>
+                                    <div class="cell"><p>Indica Inicio o Fin.</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell-img"><img src="./img/1/1.2.2.2.gif" alt=""></div>
+                                    <div class="cell"><p>Indica Impresión de datos en consola.</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell-img"><img src="./img/1/1.2.2.3.gif" alt=""></div>
+                                    <div class="cell"><p>Indica la entrada o salida de datos.</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell-img"><img src="./img/1/1.2.2.4.gif" alt=""></div>
+                                    <div class="cell"><p>Indica un proceso interno del programa previamente definido, una asignación de un valor en memoria y/o una operación aritmética.</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell-img"><img src="./img/1/1.2.2.7.gif" alt=""></div>
+                                    <div class="cell"><p>Indica una estructura selectiva. En el centro se escribe la condición y en las lineas que parten de el la opción que representan.</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell-img"><img src="./img/1/1.2.2.5.gif" alt=""></div>
+                                    <div class="cell"><p>Indica un conector dentro de la misma página. Esto representa la continuidad del diagrama dentro de la misma página.</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell-img"><img src="./img/1/1.2.2.6.gif" alt=""></div>
+                                    <div class="cell"><p>Indica un conector fuera de la misma página. Esto representa la continuidad del diagrama en una distinta página.</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell-img"><img src="./img/1/1.2.2.8.jpg" alt="" style="width: 80%;"></div>
+                                    <div class="cell"><p>Indica una estructura de repetición for, dentro indicará la condición, la inicialización de la variable de control y la manera en la que se va a modificar la variable de control.</p></div>
+                                </div>
+                            </div>
+                            
+                            <h4>1.2.2.2. Pseudocódigo</h4>
+                            <p>Es una manera de representar el algoritmo en lenguaje español, esto crea una representación más entendible del código del lenguaje de programación para las personas que no estan familiarizadas con la programación.</p>
+                            <p>A pesar de que no es dificil traducir el código a pseudocódigo una vez que se conoce el lenguaje C, dejare una lista de palabras utilizadas frecuentemente.</p>
+                            <div class="tabla" id="pseudo">
+                                <div class="row">
+                                    <div class="cell"><p><b>Código en C:</b></p></div>
+                                    <div class="cell"><p><b>Pseudocódigo:</b></p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell"><p>int</p></div>
+                                    <div class="cell"><p>Entero</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell"><p>float</p></div>
+                                    <div class="cell"><p>Real</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell"><p>char</p></div>
+                                    <div class="cell"><p>Carácter</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell"><p>void</p></div>
+                                    <div class="cell"><p>Ninguno</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell"><p>return</p></div>
+                                    <div class="cell"><p>Regresa</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell"><p>if</p></div>
+                                    <div class="cell"><p>Si</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell"><p>else</p></div>
+                                    <div class="cell"><p>Sino</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell"><p>for()</p></div>
+                                    <div class="cell"><p>Desde()</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell"><p>while()</p></div>
+                                    <div class="cell"><p>Mientras()</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell"><p>do..while()</p></div>
+                                    <div class="cell"><p>Hacer...Mientras()</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell"><p>printf()</p></div>
+                                    <div class="cell"><p>Imprimir()</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell"><p>scanf()</p></div>
+                                    <div class="cell"><p>Leer()</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell"><p>break</p></div>
+                                    <div class="cell"><p>Salir</p></div>
+                                </div>
+                            </div>
+                                <p class="ejemplo">Ejemplo (Práctica 2): </p> <br>
+                                <pre>Principal <br>Inicio <br>    Entero n1, n2, res<br>    Imprimir("Dime dos enteros")<br>    Leer(n1, n2)<br>    res ← n1 + n2<br>    Imprimir("El resultado es: ", res)<br>Fin
+                                </pre>
+
+                        <h3 id="unopuntotres">1.3. Estructuras de control.</h3>
+                            <h4 class="sub">1.3.1. Definición.</h4>
+                                <p>Son los métodos que existen dentro de un programa para dirigir la forma en la que se ejecutan las isntrucciones. Estas modifican el flujo de ejecución, manipulandolo para conveniencia del programa.</p>
+                            <h4 class="sub">1.3.2. Secuencial.</h4>
+                            <p>La estructura secuencial es aquella estructura que ejecutará las instrucciones que contiene dentro de ella en orden descendente. Tienen la siguiente estructura: <br> <br> <pre>Inicio <br>    Instrucción 1 <br>    Instrucción 2 <br>    ... <br>    Instrucción n <br>Fin</pre></p>
+                            <p><br>El ejemplo más sencillo y utilizado de este tipo de estructuras son las funciones, las cuales seran cubiertas más a fondo algunos temas adelante.</p>
+                                <p class="ejemplo">Ejemplo (Práctica 1).</p>
+                                <p class="ejemplo">Pseudocódigo:</p>
+                                <pre>Principal<br>Inicio<br>    Entero a ← 0, b ← 5, c ← 12<br>    a ← b + c / 2 * 10<br>    Imprimir(“a =”, a)<br>    b ← a * a modulo 3<br>    Imprimir(“b =”, b)<br>    c ← 20 modulo 3 / 2 * 5<br>    Imprimir(“c =”, c)<br>    b ← b + c * a + (20 - a)<br>    Imprimir(“b =”, b)<br>Fin</pre>
+                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <img src="./img/1/1.3.2.jpg" alt="" style="height: 60rem; width: auto;">
+                                <p class="ejemplo">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/2024905584ae4d4efdabe752306eb73e.js"></script>
+                                <p class="ejemplo">Captura en ejecución: </p>
+                                <img src="./img/1/1.3.2_2.jpg" alt="">
+
+                            <h4 class="sub">1.3.3. Selectiva.</h4>
+                            <p>Es una estructura que ejecuta las instrucciones que contiene dependiendo de si la condición con la que fue declarada es verdadera o es falsa. Este tipo de estructura de control se divide en 3 tipos de estructuras secuenciales, la selectiva simple, la selectiva doble y la selectiva multiple.</p>
+
+                            <h4>1.3.3.1. Si y si-sino.</h4>
+                            <p>Esta se refiere a dos tipos de estructuras selectivas, la simple y la doble. La estructura selectiva simple es aquella que solo ejecutara las instrucciones que contiene si la condición evaluada es verdadera, si la condición es falsa, esta estructura no ejecutara absolutamente nada.</p>
+                            <p>Mientras que la selectiva doble es la estructura selectiva que tiene dos opciones para ejecutar instrucciones, cuando la condición que evalua es verdadera ejecuta un conjunto de instrucciones y si es falsa otro conjunto diferente de instrucciones.</p>
+                            <p>Existe una derivación de estos dos tipos anteriores, en la cual se utilizan multiples estructuras Si y Si-Sino, a esta se le conoce como estructura selectiva doble anidada y esta tiene más de dos posibilidades para ejecutar instrucciones, si una condición es falsa, se puede evaluar otra condición y si esa es falsa se puede evaluar otra y asi sucesivamente dependiendo de lo que necesitamos solucionar con nuestro programa.</p>
+                                
+                                <p class="ejemplo">Ejemplo selectiva simple (Práctica 8).</p>
+                                <p class="ejemplo">Pseudocódigo:</p>
+                                <pre>Librerias<br>Principal<br>Inicio<br>    Entero ed<br>    Imprimir("Dame tu edad:")<br>    Leer(ed)<br>    Si (ed < 18)<br>    Inicio<br>        Imprimir("Eres menor de edad")<br>        Imprimir("No puedes votar")<br>    Fin<br>    Imprimir("Que tengas un buen día")<br>Fin</pre>
+                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <img src="./img/1/1.3.3.1.1.jpg" alt="" style="height: 60rem; width: auto;">
+                                <p class="ejemplo">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/e4836bd1774f04cb098fe2d97d93fb62.js"></script>
+                                <p class="ejemplo">Captura en ejecución: </p>
+                                <img src="./img/1/1.3.3.1.1_2.jpg" alt="">
+
+                                <br>
+
+                                <p class="ejemplo">Ejemplo selectiva doble (Práctica 10).</p>
+                                <p class="ejemplo">Pseudocódigo:</p>
+                                <pre>Librerias<br>Inicio<br>    Entero num<br>    Imprimir("Por favor ingrese un numero entero:")<br>    Leer(num)<br>    Si (num > 0)<br>        Imprimir("Es positivo")<br>    Sino<br>        Imprimir("Es negativo")<br>Fin</pre>
+                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <img src="./img/1/1.3.3.1.2.jpg" alt="" style="height: 60rem; width: auto;">
+                                <p class="ejemplo">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/5291d157bbfcab7b85d33162b2608494.js"></script>
+                                <p class="ejemplo">Captura en ejecución: </p>
+                                <img src="./img/1/1.3.3.1.2_2.jpg" alt="">
+
+                                <br>
+
+                                <p class="ejemplo">Ejemplo selectiva doble anidada (Práctica 12).</p>
+                                <p class="ejemplo">Pseudocódigo:</p>
+                                <pre>Librerias<br>Inicio<br>    Entero n1, n2, n3<br>    Imprimir("Ingresa 3 números enteros:")<br>    Leer(n1, n2, n3)<br>    Si ((n1 > n2) Y (n1 > n3))<br>        Imprimir("El numero 'n1' es el mayor.")<br>    Sino si ((n2 > n1) Y (n2 > n3))<br>        Imprimir("El numero 'n2' es el mayor.")<br>    Sino Si ((n3 > n1) Y (n3 > n2))<br>        Imprimir("El numero 'n3' es el mayor.")<br>    Sino<br>        Imprimir("Hay dos o más números iguales.")<br>Fin</pre>
+                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <img src="./img/1/1.3.3.1.3.jpg" alt="" style="height: 60rem; width: auto;">
+                                <p class="ejemplo">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/ec32df4545707c82ab4a08a899c1a5b3.js"></script>
+                                <p class="ejemplo">Captura en ejecución: </p>
+                                <img src="./img/1/1.3.3.1.3_2.jpg" alt="">
+
+                            <h4>1.3.3.2. Según sea.</h4>
+                            <p>Esta es un tipo de estructura selectiva que permite definir múltiples casos que puede llegar a cumplir una variable, y que acción o acciones tomar en cualquiera de estas situaciones, incluso es posible determinar qué acción llevar a cabo en caso de no cumplir ninguna de las condiciones dadas.</p>
+                                <p class="ejemplo">Ejemplo (Práctica 16).</p>
+                                <p class="ejemplo">Pseudocódigo:</p>
+                                <pre>Librerias<br>Principal<br>Inicio<br>    Entero opc, l1, l2, area, bMenor, bMayor, h, radio<br>    Imprimir("Elige una opcion: 1. Cuadro 2. Rectangulo 3. Circulo 4. Trapecio")<br>    Leer(opc)<br>    Segun sea (opc)<br>    Inicio<br>        Caso 1:<br>            Inicio<br>                Imprimir("Dime la longitud del lado del cuadro:")<br>                Leer(l1)<br>                area <- l1 * l1<br>                Imprimir("El area del cuadro es", area)<br>                Interrumpir<br>            Fin<br>        Caso 2:<br>            Inicio<br>                Imprimir("Dime la longitud del primer lado del rectangulo:")<br>                Leer(l1)<br>                Imprimir("Dime la longitud del segundo lado del rectangulo:")<br>                Leer(l2)<br>                area <- l1 * l2<br>                Imprimir("El area del rectangulo es", area)<br>                Interrumpir<br>            Fin<br>        Caso 3:<br>            Inicio<br>                Imprimir("Dime la longitud del radio del circulo:")<br>                Leer(radio)<br>                area <- (3.1416 * (radio * radio))<br>                Imprimir("El area del circulo es", area)<br>                Interrumpir<br>            Fin<br>        Caso 4:<br>            Inicio<br>                Imprimir("Por favor ingresa la longitud de la Base Mayor del trapecio:")<br>                Leer(bMayor)<br>                Imprimir("Por favor ingresa la longitud de la Base Menor del trapecio:")<br>                Leer(bMenor)<br>                Imprimir("Por favor ingresa la Altura del trapecio:")<br>                Leer(h)<br>                area <- ((bMayor + bMenor) * h) / 2<br>                Imprimir("El area del trapecio es", area)<br>                Interrumpir<br>            Fin<br>        Otro:<br>            Imprimir("No existe esa opción")<br>    Fin<br>    Regresa 0<br>Fin</pre>
+                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <img src="./img/1/1.3.3.2.jpg" alt="">
+                                <p class="ejemplo">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/bf8cbd728663b3a318f5e8f47b2d0911.js"></script>
+                                <p class="ejemplo">Captura en ejecución: </p>
+                                <img src="./img/1/1.3.3.2.1.jpg" alt="">
+
+                            <h4 class="sub">1.3.4. Estructuras de control repetitivas.</h4>
+                            <p>Las estructuras de control repetitivas son las estructuras que ejecutaran un bloque de instrucciones mientras una condición evaluada sea verdadera, esta estructura ejecutara las instrucciones que contiene hasta que la condición sea falsa, o en su defecto, se repetirá el número de veces que el programador indique.</p>
+                            <h4>1.3.4.1. Contadores, acumuladores y banderas.</h4>
+                            <p><b>Contador: </b>Un contador es una variable a la cual su valor se incrementa o decrementa en una cantidad constante cada vez que se produce un determinado suceso o acción. Estos se utilizan con la finalidad de contar las veces que sucede una acción o para controlar el proceso de un bucle. En algunas ocasiones, dependiendo la lógica que necesitemos que el bucle siga, se ocupara inicializar un valor en el contador, para que arranque desde ese número y no desde el 0, como el lenguaje C suele hacer.</p>
+                            <br>
+                            <p><b>Acumulador: </b>Un acumulador es una variable que suma sobre si misma un conjunto de valores para de esta manera tener la suma de todos ellos en una sola variable. La diferencia entre un contador y un acumulador es que el acumulador normalmente solo aumenta de 1 en 1, el acumulador no aumenta en una cantidad constante.</p>
+                            <br>
+                            <p><b>Bandera: </b>Una bandera es una variable, normalmente con un valor booleano, que nos indica si ha ocurrido un suceso. Esta se utiliza como una señal para una función, un bucle o una estructura selectiva. Frecuentemente se utiliza una analogía de un interruptor para ejemplificar este concepto, si la bandera es falsa es como si el interruptor estuviera apagado, y si es verdadera es como si el interruptor estuviera encendido.</p>
+
+                            <h4>1.3.4.2. Mientras.</h4>
+                            <p>La estructura de control repetitiva While o "Mientras" es la estructura que analiza una condición al principio, si esta es verdadera entra al ciclo while, al igual que una sentencia If, y cuando termina de ejecutar las instrucciones que contiene, vuelve a analizar la condición del principio, si es verdadera vuelve a ejecutar las instrucciones que contiene, si es falsa, pasa a la siguiente instrucción que no este contenida en el.</p>
+                                <p class="ejemplo">Ejemplo (Práctica 22).</p>
+                                <p class="ejemplo">Pseudocódigo:</p>
+                                <pre>Librerias<br>Principal<br>Inicio<br>    Entero con <- 105;<br>    Mientras (con >= 1)<br>        Inicio<br>            Imprimir(con)<br>            con = con -2<br>        Fin<br>    Regresa 0<br>Fin</pre>
+                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <img src="./img/1/1.3.4.2.jpg" alt="" style="width: 40%; height: auto;">
+                                <p class="ejemplo">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/ad97c88c319614be51b15b4f5dfc4211.js"></script>
+                                <p class="ejemplo">Captura en ejecución: </p>
+                                <img src="./img/1/1.3.4.2.1.jpg" alt="" style="width: 40%; height: auto;">
+
+                            <h4>1.3.4.3. Hacer-Mientras.</h4>
+                            <p>La estructura de control repetitiva Do...While o "Hacer-Mientras" es la estructura que analiza una condición al final de su estructura, si esta es verdadera volverá a ejecutar las instrucciones que contiene, para finalizar de ejecutar las instrucciones que contiene, la condición que se evalua al final debe ser falsa, esta estructura se ejecutará al menos 1 vez.</p>
+                                <p class="ejemplo">Ejemplo (Práctica 26).</p>
+                                <p class="ejemplo">Pseudocódigo:</p>
+                                <pre>Librerías<br>Principal<br>Inicio<br>    Entero i ← 1, res<br>    Hacer<br>        Inicio<br>            res ← i * 7<br>            Imprimir("7 x 'i' = 'res'")<br>            inc i<br>        Fin<br>    Mientras (i <= 10)<br>Fin</pre>
+                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <img src="./img/1/1.3.4.3.1.jpg" alt="" style="width: 20%; height: auto;">
+                                <p class="ejemplo">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/07377162a9f382e49f368629928ceee4.js"></script>
+                                <p class="ejemplo">Captura en ejecución: </p>
+                                <img src="./img/1/1.3.4.3.2.jpg" alt="">
+                                
+                                <h4>1.3.4.4. Desde.</h4>
+                                <p>La estructura de control repetitiva For o "Desde" es la estructura que repetición que tiene que declarar al principio el valor inicial de la variable de control, la condición que evaluara el ciclo y la manera en la que se va a modificar la variable de control en cada ciclo. Esta estructura normalmente define el número de veces que va a repetir las instrucciones que contiene desde el momento en el que se declara.</p>
+                                <p class="ejemplo">Ejemplo (Práctica 29).</p>
+                                <p class="ejemplo">Pseudocódigo:</p>
+                                <pre>Librerías<br>Principal<br>Inicio<br>    Entero tabla, i, lim, res<br>    Imprimir("Por favor ingresa la tabla de multiplicar que quiere visualizar: ")<br>    Leer(tabla)<br>    Imprimir("Por favor ingrese el límite de la tabla de multiplicar: ")<br>    Leer(lim)<br>    Desde (i <- 1; i <= lim; inc i)<br>    Inicio<br>        res <- tabla * i<br>        Imprimir("'tabla' x 'i' = 'res'")<br>    Fin<br>Fin</pre>
+                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <img src="./img/1/1.3.4.4.1.jpg" alt="" style="width: 30%;">
+                                <p class="ejemplo">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/b7ed4d606156a75cc51ade045394df6f.js"></script>
+                                <p class="ejemplo">Captura en ejecución: </p>
+                                <img src="./img/1/1.3.4.4.2.jpg" alt="">
+
+                        <h3 id="unopuntocuatro">1.4. Estructuras anidadas.</h3>
+                            <h4 class="sub">1.4.1. Definición.</h4>
+                            <p>Las estructuras de control, tanto selectivas como repetitivas, no solo pueden convivir solas o entre ellas, si no que se pueden hacer el uso de tantas de estas estructuras como sea necesario para resolver un problema, incluso dentro de otra estructura de control, a la manera en la que se ponen estructuras dentro de otras estructuras se le llama anidación, y puede existir en cualquier estructura de control.</p>
+
+                            <h4 class="sub">1.4.2. Implementación.</h4>
+                            <p>El caso de uso más común de las estructuras anidadas son las estructuras de repetición anidadas para el manejo de arreglos bidimensionales, los cuales veremos más adelante, aqui se presenta un ejemplo de anidación de estructuras de repetición.</p>
+                                <p class="ejemplo">Ejemplo (Práctica 31).</p>
+                                <p class="ejemplo">Pseudocódigo:</p>
+                                <pre>Librerías<br> Principal<br> Inicio<br>     Entero i, j<br>     Desde (i <- 1; i <= 10; inc i)<br>         Inicio<br>             Imprimir("Tabla de multiplicar del ", i)<br>             Desde (j <- 1; j <= 10; inc j)<br>                 Inicio<br>                     Imprimir(i, "x", j, "=", (i*j))<br>                 Fin<br>         Fin<br>     Regresa(0)<br> Fin</pre>
+                                <p class="ejemplo">Diagrama de flujo:</p>
+                                <img src="./img/1/1.4.2.1.jpg" alt="" style="width: 50%;">
+                                <p class="ejemplo">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/fe926cbe72ef65c1f9d9b57bf47f16ef.js"></script>
+                                <p class="ejemplo">Captura en ejecución: </p>
+                                <img src="./img/1/1.4.2.2.jpg" alt="">
+                </div>
+            </div>
+        </main>
+        <aside>
+            <div class="lateral">
+                <img id="menu" src="./img/menu.png">
+                <div id="menu-cont">
+                    <p id="modulo1-texto">Módulo 1: Programación estructurada <span id="m1-sim">↓</span> </p>
+                    <div id="modulo1">
+                        <a href="./modulo1.html#unopuntouno">1.1. Conceptos basicos de programación estructurada.</a>
+                        <a href="./modulo1.html#unopuntodos">1.2. Algoritmo.</a>
+                        <a href="./modulo1.html#unopuntotres">1.3. Estructuras de control.</a>
+                        <a href="./modulo1.html#unopuntocuatro">1.4. Estructuras anidadas.</a>
+                    </div>
+                    <p id="modulo2-texto">Módulo 2: Arreglos <span id="m2-sim">↓</span> </p>
+                    <div id="modulo2">
+                        <a href="./modulo2.html#dospuntouno">2.1. Definición.</a>
+                        <a href="./modulo2.html#dospuntodos">2.2. Tipos de arreglos.</a>
+                    </div>
+                    <p id="modulo3-texto">Módulo 3: Manejo de funciones <span id="m3-sim">↓</span> </p>
+                    <div id="modulo3">
+                        <a href="./modulo3.html#trespuntouno">3.1. Definición.</a>
+                        <a href="./modulo3.html#trespuntodos">3.2. Funciones sin paso de párametros.</a>
+                        <a href="./modulo3.html#trespuntotres">3.3. Funciones con paso de párametros por valor.</a>
+                    </div>
+                    <p id="modulo4-texto">Módulo 4: Registros <span id="m4-sim">↓</span> </p>
+                    <div id="modulo4">
+                        <a href="./modulo4.html#cuatropuntouno">4.1. Definición.</a>
+                        <a href="./modulo4.html#cuatropuntodos">4.2. Operaciones con registros.</a>
+                        <a href="./modulo4.html#cuatropuntotres">4.3. Arreglos con elementos de tipo registro.</a>
+                    </div>
+                    <a href="./index.html" style="text-align: center; margin-top: 5rem;">Página principal.</a>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer>Proyecto realizado por Benavides Hernandez Isaac Alain</footer>
+</body>
+<script src="./js/efectos.js"></script>
+</html>

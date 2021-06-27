@@ -1,0 +1,191 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final Programación</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="head">
+        <div class="img-head">
+            <img id="banner" src="./img/cod.png" alt="">
+        </div>
+        <div class="info">
+            <a href="./index.html"><h1>Proyecto Final: Programación.</h1></a>
+            <p><b>Realizado por:</b> Benavides Hernandez Isaac Alain</p>
+            <p><b>Sección:</b> D24</p>
+            <p><b>NRC:</b> 42556</p>
+            <p><b>Horario:</b> Martes y Jueves de 11 AM a 1 PM.</p>
+        </div>
+    </div>
+    <div class="flex-main">
+        <main>
+            <div class="contenido">
+                <div class="unidad" id="arreglos">
+                    <h2>Módulo 2: Arreglos.</h2>
+                        <h3 id="dospuntouno">2.1. Definición.</h3>
+                        <p>Un arreglo es una variable que provee la opción de disponer de varios datos o espacio para datos a los cuales se puede acceder y se manejan con un mismo identificador, este tipo de variable a pesar de que guarda varios datos, permite la utilización individual de sus elementos, guarda todos sus elementos en espacios continuos en memoria.</p>
+                        <h3  id="dospuntodos">2.2. Tipos de arreglos.</h3>
+                            <h4 class="sub">2.2.1. Unidimensionales.</h4>
+                            <p>Los arreglos unidimensionales son variables estructuradas formadas con un número "n" de variables simples del mismo tipo que son denominadas elementos del arreglo. El número de componentes "n" es la dimensión del arreglo. En programación a este tipo de arreglos tambien se le conocen como vectores.</p>
+                            <br><p><b>Estructura de un vector de 5 elementos: </b></p>
+                            <div class="tabla" id="unidimensional">
+                                <div class="row">
+                                    <div class="cell" style="background-color: rgba(0, 131, 92, 1);"><p style="color: #e9e9e9;">Índice</p></div>
+                                    <div class="cell"><p>0</p></div>
+                                    <div class="cell"><p>1</p></div>
+                                    <div class="cell"><p>2</p></div>
+                                    <div class="cell"><p>3</p></div>
+                                    <div class="cell"><p>4</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell" style="background-color: rgba(0, 131, 92, 1);"><p style="color: #e9e9e9;">Valor</p></div>
+                                    <div class="cell"><p>7</p></div>
+                                    <div class="cell"><p>88</p></div>
+                                    <div class="cell"><p>14</p></div>
+                                    <div class="cell"><p>0</p></div>
+                                    <div class="cell"><p>45</p></div>
+                                </div>
+                            </div>
+
+                            <p class="ejemplo">Ejemplo (Práctica 37).</p>
+                            <p class="ejemplo">Pseudocódigo:</p>
+                                <pre>Librerías<br>Principal<br>Inicio<br>    Entero array[15], mayor ← 0, i<br>    Desde (i ← 0; i < 15; inc i)<br>        Inicio<br>            Imprimir("Por favor ingresa el elemento", i)<br>            Leer(array[i])<br>        Fin<br>    Desde (i ← 0; i < 15; inc i)<br>        Inicio<br>            Si (array[i] > mayor)<br>                mayor ← array[i]<br>        Fin<br>    Imprimir("El elemento mayor es: ", mayor)<br>Fin</pre>
+                                <p class="ejemplo">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/d65f57af46a232ca733af54c176b3a3b.js"></script>
+                                <p class="ejemplo">Captura en ejecución: </p>
+                                <img src="./img/2/2.2.1.jpg" alt="">
+                            
+                            <p>Existe un tipo de arreglo unidimensional que se utiliza para poder suplir lo que en otros lenguajes de programación se conoce como el tio de dato String, las cadenas o cadenas de carácter. <br>La única diferencia entre los arreglos y las cadenas de carácter es que las cadenas se pueden manipular de manera individual y de manera conjunta, puedes imprimir un solo carácter de la cadena o la cadena completa.</p>
+                            <br><p><b>Estructura de una cadena de 5 elementos: </b></p>
+                            <div class="tabla" id="unidimensional">
+                                <div class="row">
+                                    <div class="cell" style="background-color: rgba(0, 131, 92, 1);"><p style="color: #e9e9e9;">Índice</p></div>
+                                    <div class="cell"><p>0</p></div>
+                                    <div class="cell"><p>1</p></div>
+                                    <div class="cell"><p>2</p></div>
+                                    <div class="cell"><p>3</p></div>
+                                    <div class="cell"><p>4</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell" style="background-color: rgba(0, 131, 92, 1);"><p style="color: #e9e9e9;">Valor</p></div>
+                                    <div class="cell"><p>H</p></div>
+                                    <div class="cell"><p>O</p></div>
+                                    <div class="cell"><p>L</p></div>
+                                    <div class="cell"><p>A</p></div>
+                                    <div class="cell"><p>\0</p></div>
+                                </div>
+                            </div>
+
+                            <p class="ejemplo">Ejemplo (Práctica 46).</p>
+                            <p class="ejemplo">Pseudocódigo:</p>
+                            <pre>Librerias<br>Principal<br>Inicio<br>    Caracter cadena[26]<br>    Entero total<br>    Imprimir("Introduce una oración (máx. 25 carácteres): ")<br>    Leercad(cadena)<br>    total <- Longitud_de_cadena(cadena)<br>    Imprimir("La longitud de la cadena es: ", total)<br>Fin</pre>
+                            <p class="ejemplo">Código en C:</p>
+                            <script src="https://gist.github.com/isaac-bh/b7ab6a6c96d4645b8e973db47b49cea1.js"></script>
+                            <p class="ejemplo">Captura en ejecución: </p>
+                            <img src="./img/2/2.2.1.1.png" alt="">
+
+                            <h4 class="sub">2.2.2. Bidimensionales.</h4>
+                            <p>Los arreglos bidimensionales son un tipo de variable estructurada formada de un número "n" de celdas por un número "m" de filas. Tambien se podria decir que son varios arreglos unidimensionales unidos. Este tipo de arreglos utiliza dos índices para ubicar a los datos, el número de fila y el número de celda. Tambien se les denominan matrices.</p>
+                            <br><p><b>Estructura de una matriz de 5x5: </b></p>
+                            <div class="tabla" id="unidimensional">
+                                <div class="row">
+                                    <div class="cell" style="background-color: rgba(0, 131, 92, 1);"><p style="color: #e9e9e9;">Índice</p></div>
+                                    <div class="cell" style="background-color: rgba(0, 131, 92, 1);"><p style="color: #e9e9e9;">0</p></div>
+                                    <div class="cell" style="background-color: rgba(0, 131, 92, 1);"><p style="color: #e9e9e9;">1</p></div>
+                                    <div class="cell" style="background-color: rgba(0, 131, 92, 1);"><p style="color: #e9e9e9;">2</p></div>
+                                    <div class="cell" style="background-color: rgba(0, 131, 92, 1);"><p style="color: #e9e9e9;">3</p></div>
+                                    <div class="cell" style="background-color: rgba(0, 131, 92, 1);"><p style="color: #e9e9e9;">4</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell" style="background-color: rgba(0, 131, 92, 1);"><p style="color: #e9e9e9;">0</p></div>
+                                    <div class="cell"><p>7</p></div>
+                                    <div class="cell"><p>88</p></div>
+                                    <div class="cell"><p>14</p></div>
+                                    <div class="cell"><p>0</p></div>
+                                    <div class="cell"><p>45</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell" style="background-color: rgba(0, 131, 92, 1);"><p style="color: #e9e9e9;">1</p></div>
+                                    <div class="cell"><p>25</p></div>
+                                    <div class="cell"><p>50</p></div>
+                                    <div class="cell"><p>75</p></div>
+                                    <div class="cell"><p>100</p></div>
+                                    <div class="cell"><p>0</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell" style="background-color: rgba(0, 131, 92, 1);"><p style="color: #e9e9e9;">2</p></div>
+                                    <div class="cell"><p>13</p></div>
+                                    <div class="cell"><p>39</p></div>
+                                    <div class="cell"><p>57</p></div>
+                                    <div class="cell"><p>82</p></div>
+                                    <div class="cell"><p>91</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell" style="background-color: rgba(0, 131, 92, 1);"><p style="color: #e9e9e9;">3</p></div>
+                                    <div class="cell"><p>12</p></div>
+                                    <div class="cell"><p>3</p></div>
+                                    <div class="cell"><p>7</p></div>
+                                    <div class="cell"><p>82</p></div>
+                                    <div class="cell"><p>92</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell" style="background-color: rgba(0, 131, 92, 1);"><p style="color: #e9e9e9;">4</p></div>
+                                    <div class="cell"><p>48</p></div>
+                                    <div class="cell"><p>12</p></div>
+                                    <div class="cell"><p>677</p></div>
+                                    <div class="cell"><p>99</p></div>
+                                    <div class="cell"><p>101</p></div>
+                                </div>
+                            </div>
+                                <p class="ejemplo">Ejemplo (Práctica 44).</p>
+                                <p class="ejemplo">Pseudocódigo:</p>
+                                <pre>Librerías<br>Principal<br>Inicio<br>    Entero i, j, k<br>    Real a[3][3], b[3][3], c[3][3], suma<br>    Desde (i ← 0; i < 3; inc i)<br>    Inicio<br>        Desde (j ← 0; j < 3; inc j)<br>        Inicio<br>            Imprimir("Por favor ingresa el elemento ", i + 1, j + 1, "de la matriz A:")<br>            Leer(a[i][j])<br>            Imprimir("Por favor ingresa el elemento ", i + 1, j + 1, "de la matriz B:")<br>            Leer(b[i][j])<br>        Fin<br>    Fin<br>    <br>    Desde (i ← 0; i < 3; inc i)<br>    Inicio<br>        Desde (j ← 0; j < 3; inc j)<br>        Inicio<br>            c[i][j] ← 0<br>            Desde (k ← 0; k < 3; inc k)<br>                c[i][j] ← (c[i][j] + (a[i][k] * b[k][j])) <br>        Fin<br>    Fin<br><br>    Desde (i ← 0; i < 3; inc i)<br>    Inicio<br>        Desde (j ← 0; j < 3; inc j)<br>            Imprimir(c[i][j])<br>        Imprimir(\n)<br>    Fin<br>Fin</pre>
+                                <p class="ejemplo">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/5413a08f1dd14b075e4f6a9719272a95.js"></script>
+                                <p class="ejemplo">Captura en ejecución: </p>
+                                <img src="./img/2/2.2.2.jpg" alt="">
+
+                </div>
+            </div>
+        </main>
+        <aside>
+            <div class="lateral">
+                <img id="menu" src="./img/menu.png">
+                <div id="menu-cont">
+                    <p id="modulo1-texto">Módulo 1: Programación estructurada <span id="m1-sim">↓</span> </p>
+                    <div id="modulo1">
+                        <a href="./modulo1.html#unopuntouno">1.1. Conceptos basicos de programación estructurada.</a>
+                        <a href="./modulo1.html#unopuntodos">1.2. Algoritmo.</a>
+                        <a href="./modulo1.html#unopuntotres">1.3. Estructuras de control.</a>
+                        <a href="./modulo1.html#unopuntocuatro">1.4. Estructuras anidadas.</a>
+                    </div>
+                    <p id="modulo2-texto">Módulo 2: Arreglos <span id="m2-sim">↓</span> </p>
+                    <div id="modulo2">
+                        <a href="./modulo2.html#dospuntouno">2.1. Definición.</a>
+                        <a href="./modulo2.html#dospuntodos">2.2. Tipos de arreglos.</a>
+                    </div>
+                    <p id="modulo3-texto">Módulo 3: Manejo de funciones <span id="m3-sim">↓</span> </p>
+                    <div id="modulo3">
+                        <a href="./modulo3.html#trespuntouno">3.1. Definición.</a>
+                        <a href="./modulo3.html#trespuntodos">3.2. Funciones sin paso de párametros.</a>
+                        <a href="./modulo3.html#trespuntotres">3.3. Funciones con paso de párametros por valor.</a>
+                    </div>
+                    <p id="modulo4-texto">Módulo 4: Registros <span id="m4-sim">↓</span> </p>
+                    <div id="modulo4">
+                        <a href="./modulo4.html#cuatropuntouno">4.1. Definición.</a>
+                        <a href="./modulo4.html#cuatropuntodos">4.2. Operaciones con registros.</a>
+                        <a href="./modulo4.html#cuatropuntotres">4.3. Arreglos con elementos de tipo registro.</a>
+                    </div>
+                    <a href="./index.html" style="text-align: center; margin-top: 5rem;">Página principal.</a>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer>Proyecto realizado por Benavides Hernandez Isaac Alain</footer>
+</body>
+<script src="./js/efectos.js"></script>
+</html>

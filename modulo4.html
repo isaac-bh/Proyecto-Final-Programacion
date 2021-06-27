@@ -1,0 +1,149 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final Programación</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="head">
+        <div class="img-head">
+            <img id="banner" src="./img/cod.png" alt="">
+        </div>
+        <div class="info">
+            <a href="./index.html"><h1>Proyecto Final: Programación.</h1></a>
+            <p><b>Realizado por:</b> Benavides Hernandez Isaac Alain</p>
+            <p><b>Sección:</b> D24</p>
+            <p><b>NRC:</b> 42556</p>
+            <p><b>Horario:</b> Martes y Jueves de 11 AM a 1 PM.</p>
+        </div>
+    </div>
+    <div class="flex-main">
+        <main>
+            <div class="contenido">
+                <div class="unidad" id="registros">
+                    <h2>Módulo 4: Registros.</h2>
+                        <h3 id="cuatropuntouno">4.1. Definición.</h3>
+                        <p>En el lenguaje C, los registros son una colección de una o más variables, de tipos posiblemente diferentes, las cuales son agrupadas bajo un solo nombre para manejo conveniente. Los registros, en el lenguaje C son también conocidos como estructuras. Los registros ayudan a organizar datos complicados, en particular dentro de programas grandes, debido a que permiten que a un grupo de variables relacionadas se les trate como una unidad en lugar de como entidades separadas. Los registros pueden ser copiados, se puede obtener su dirección en memoria, se puede acceder a los valores de sus miembros, y por ende, pueden ser pasados como parámetros o también ser regresados por una función. Los registros fueron diseñados para que los programadores pudieran crear su “propio tipo de dato”, el cual se ajusta a necesidades, en lenguaje C, los registros es lo que mas se acerca a una tabla en una base de datos.</p>
+                        <p>El modificador typedef nos permite definir a una estructura como un tipo de dato nuevo para el lenguaje C, se necesita especificar que nombre se le asignara al nuevo tipo de dato.</p>
+                        <br>
+                        <p><b>Tipos de registro.</b></p>
+                        <br>
+                        <p><b>Registros simples: </b>Este tipo de registro solo contiene información de una sola entidad.</p>
+                        <br>
+                        <pre>typedef struct {<br>    char nombre[50];<br>    char sexo[20];<br>    char rfc[13];<br>    char domicilio[100];<br>} Empleado;</pre>
+                        <br>
+                        <p><b>Registros anidados: </b>Este tipo de registro permite contener datos de diferentes entidades que tengan una relación entre si.</p>
+                        <br>
+                        <pre>typedef struct {<br>    char fecha[50];<br>    int tieneSeguroMedico;<br>    struct Empleado{<br>        char nombre[50];<br>        char sexo[20];<br>        char rfc[13];<br>        char domicilio[100];<br>    } paciente;<br>    char enfermedadCronica[50];<br>} RegistroMedico;</pre>
+                        <br>
+                        <p><b>Arreglos de registros: </b>Este tipo de registro funciona al igual que un registro de datos primitivos. Al igual que un arreglo normal este nos permite juntar varios datos del mismo tipo en el mismo identificador y accediendo a estos a través de un índice, solo que en este caso es un tipo de dato que nosotros mismos definimos.</p>
+                        <br>
+                        <pre>typedef struct {<br>    char fecha[50];<br>    int quincena;<br>    struct Empleado{<br>        char nombre[50];<br>        int sexo;<br>        char rfc[13];<br>        char domicilio[100];<br>    } empleados[10];<br>    int bonos;<br>    int fondoDeAhorro;<br>} Nomina;</pre>
+                        <h3 id="cuatropuntodos">4.2. Operaciones con registros.</h3>
+                            <h4 class="sub">4.2.1. Asignación a los datos de un registro.</h4>
+                            <p>Existen dos maneras basicas de asignar datos a los registros, en una se trabaja con registros que son declarados globalmente o localmente pero fueron declarados en la misma función que se esta modificando. Y en la segunda manera se trabaja con direcciones de memoria para transferir registros entre funciones.</p>
+                            <br>
+                            <p><b>Asignación con operador miembro de la estructura: </b>El operador miembro de la estructura se representa en C como un punto (.), este operador se utiliza para referenciar en especifico a un campo de la estructura. Para utilizar este método se pone el nombre del alias de la estructura seguido de un punto y el campo en el que se quieren guardar los datos.</p>
+                                <p class="ejemplo">Ejemplo:</p>
+                                <p class="ejemplo">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/23aff68e9b201d614a096976fe68a354.js"></script>
+                                
+                                <p><b>Asignación utilizando punteros: </b>Para utilizar los punteros de registros es necesario que el registro sea declarado en modo puntero o en su defecto que se pase la dirección de memoria de la estructura a otra función.</p>
+                                <p>Para la asignación de datos de un registro utilizando punteros se pueden utilizar dos métodos, el primero es con el signo de puntero (*) en conjunto con el operador miembro de la estructura (.), se indica que es un puntero, se pone el alias y estos dos se encierran en parentesis, posteriormente se pone el operador miembro de la estructura y el campo al cual se quiere acceder.</p>
+                                <p>O existe el operador flecha (->), el cual fue hecho por los creadores del lenguaje C para abreviar el método anterior, sobre todo para que el código tuviera más legibilidad. En los siguientes ejemplos solo emplearé el operador flecha ya que tiene una legibilidad mayor.</p>
+                                <p class="ejemplo">Ejemplo:</p>
+                                <p class="ejemplo">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/8b2c19f3666abec09b1bee4d8e4dffa1.js"></script>
+
+                            <h4 class="sub">4.2.2. Salida de datos de un registro.</h4>
+                            <p>Al igual que la asignación, existen dos métodos basicos para asignar datos a un registro, con el operador miembro de la estructura (.) y con el operador flecha (->).</p>
+                            <br>
+                            <p><b>Salida de datos con el operador miembro de la función:</b></p>
+                                <p class="ejemplo" style="margin-top: 0 !important;">Ejemplo.</p>
+                                <p class="ejemplo">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/000fd59ce57967cef6b757689aca619f.js"></script>
+                            
+                            <p>Al igual que la asignación, existen dos métodos basicos para asignar datos a un registro, con el operador miembro de la estructura (.) y con el operador flecha (->).</p>
+                            <br>
+                            <p><b>Salida de datos utilizando punteros:</b></p>
+                                <p class="ejemplo">Ejemplo.</p>
+                                <p class="ejemplo" style="margin-top: 0 !important;">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/d0296b4752eb376060bcf10321860471.js"></script>
+
+                        <h3 id="cuatropuntotres">4.3. Arreglos con elementos de tipo registro.</h3>
+                            <h4 class="sub">4.3.1. Definición</h4>
+                            <p>Los arreglos con elementos de tipo registro son una colección de varias entidades relacionadas que tienen algo en común y las cuales, cada una guarda varios datos que pueden ser de diferentes tipos, o tambien pueden guardar otros registros. Estos son agrupados en un solo identificador y se accede a ellos gracias a un índice.</p>
+                            <p>También se les conoce como una expansión lateral de las estructuras simples o estructuras anidadas, ya que se pasa de guardar un solo valor en cada campo a guardar varios datos con la misma estructura sin declarar varios alias.</p>
+                            <h4 class="sub">4.3.2. Operaciones con arreglos de registros</h4>
+                            <p>Este tipo de registro está sujeto a las operaciones fundamentales de lso registros, copiarla, asignarla, tomar su dirección y tener acceso a los miembros de sus elementos. Sin embargo, los miembros de sus elementos si pueden utilizar todas las operaciones que vienen con su tipo de dato, en caso de enteros o flotantes, operaciones numéricas, en caso de cadenas de carácteres, funciones de la libreria String.h.</p>
+                            <p>Aqui se debe de mencionar algo importante con respecto al uso de punteros con este tipo de registros, ya que puede resultar algo complicado. Para poder lograr pasar o referenciar el arreglo de registros que contiene una función es necesario crear un puntero del mismo tipo que la estructura, sin embargo este será un puntero simple, sin dimensión, a diferencia del arreglo. Este apuntará al principio del arreglo de registros y para pasar al siguiente elemento del arreglo se debe de incrementar en 1 el puntero.</p>
+                            <h4>4.3.2.1. Entrada de datos de los elementos de un arreglo de registros.</h4>
+                            <p><b>Por inicialización: </b>La inicialización se puede realizar únicamente cuando se declara el alias, de otra manera no se podrán inicializar todos los valores de una sola vez.</p>
+                                <p class="ejemplo">Ejemplo.</p>
+                                <p class="ejemplo" style="margin-top: 0 !important;">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/f2046451c6c2a40a97a41c2125e84b40.js"></script>
+                            <p><b>Asignación por el operador miembro de la estructura: </b>Se utiliza de igual manera que en los otros tipos de estructura, solo que agregando el índice al alias para especificar cual elemento del arreglo se quiere acceder. Recordemos que el operador miembro de la estructura es representado con un punto (.) y se utiliza para referenciar a un campo especifico de la estructura y no a toda la estructura.</p>
+                                <p class="ejemplo">Ejemplo.</p>
+                                <p class="ejemplo" style="margin-top: 0 !important;">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/44e5d5c2dd22d6aa087cf028a44b0569.js"></script>
+                            <p><b>Asignación utilizando punteros: </b>Se utilizan de igual manera que en los otros tipos de estructura, solo que recordemos la advertencia anterior, los punteros para los arreglos de registros son un puntero que apunta al principio del arreglo y posteriormente se tiene que incrementar su valor para que itere por el arreglo.</p>
+                                <p class="ejemplo">Ejemplo.</p>
+                                <p class="ejemplo" style="margin-top: 0 !important;">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/695511470d7eb56c2434fc04ea51c570.js"></script>
+
+                            <h4>4.3.2.2. Salida de datos de un arreglo de registros.</h4>
+                            <p>Los métodos de salida de datos de un arreglo de registros son los mismos métodos que se utilizan para entrada de datos, solo se utilizan otras funciones para hacer esto, en lugar de scanf se utiliza printf por ejemplo.</p>
+                            <br>
+                            <p><b>Salida por el operador miembro de la estructura: </b>Se utiliza de igual manera que en la entrada de datos, se especifica el alias seguido del índice al que se quiere acceder, seguido del operador (.) y el campo que se quiere imprimir.</p>
+                                <p class="ejemplo">Ejemplo.</p>
+                                <p class="ejemplo" style="margin-top: 0 !important;">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/66a303f023753cd4deced2bcdb6a7394.js"></script>
+
+                            <p><b>Salida utilizando punteros: </b>Se utilizan los mismos métodos que en la entrada de datos. Recordemos que los punteros de los arreglos de registros apuntan al primer elemento del arreglo, por lo que si se quiere utilizar para todos los elementos se tiene que incrementar el valor del puntero para que apunte hacia el siguiente elemento.</p>
+                                <p class="ejemplo">Ejemplo.</p>
+                                <p class="ejemplo" style="margin-top: 0 !important;">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/1f548a551a2c137cc4b4dcfd6166f43e.js"></script>
+                </div>
+            </div>
+        </main>
+        <aside>
+            <div class="lateral">
+                <img id="menu" src="./img/menu.png">
+                <div id="menu-cont">
+                    <p id="modulo1-texto">Módulo 1: Programación estructurada <span id="m1-sim">↓</span> </p>
+                    <div id="modulo1">
+                        <a href="./modulo1.html#unopuntouno">1.1. Conceptos basicos de programación estructurada.</a>
+                        <a href="./modulo1.html#unopuntodos">1.2. Algoritmo.</a>
+                        <a href="./modulo1.html#unopuntotres">1.3. Estructuras de control.</a>
+                        <a href="./modulo1.html#unopuntocuatro">1.4. Estructuras anidadas.</a>
+                    </div>
+                    <p id="modulo2-texto">Módulo 2: Arreglos <span id="m2-sim">↓</span> </p>
+                    <div id="modulo2">
+                        <a href="./modulo2.html#dospuntouno">2.1. Definición.</a>
+                        <a href="./modulo2.html#dospuntodos">2.2. Tipos de arreglos.</a>
+                    </div>
+                    <p id="modulo3-texto">Módulo 3: Manejo de funciones <span id="m3-sim">↓</span> </p>
+                    <div id="modulo3">
+                        <a href="./modulo3.html#trespuntouno">3.1. Definición.</a>
+                        <a href="./modulo3.html#trespuntodos">3.2. Funciones sin paso de párametros.</a>
+                        <a href="./modulo3.html#trespuntotres">3.3. Funciones con paso de párametros por valor.</a>
+                    </div>
+                    <p id="modulo4-texto">Módulo 4: Registros <span id="m4-sim">↓</span> </p>
+                    <div id="modulo4">
+                        <a href="./modulo4.html#cuatropuntouno">4.1. Definición.</a>
+                        <a href="./modulo4.html#cuatropuntodos">4.2. Operaciones con registros.</a>
+                        <a href="./modulo4.html#cuatropuntotres">4.3. Arreglos con elementos de tipo registro.</a>
+                    </div>
+                    <a href="./index.html" style="text-align: center; margin-top: 5rem;">Página principal.</a>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer>Proyecto realizado por Benavides Hernandez Isaac Alain</footer>
+</body>
+<script src="./js/efectos.js"></script>
+</html>

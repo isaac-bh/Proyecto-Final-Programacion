@@ -1,0 +1,118 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final Programación</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="head">
+        <div class="img-head">
+            <img id="banner" src="./img/cod.png" alt="">
+        </div>
+        <div class="info">
+            <a href="./index.html"><h1>Proyecto Final: Programación.</h1></a>
+            <p><b>Realizado por:</b> Benavides Hernandez Isaac Alain</p>
+            <p><b>Sección:</b> D24</p>
+            <p><b>NRC:</b> 42556</p>
+            <p><b>Horario:</b> Martes y Jueves de 11 AM a 1 PM.</p>
+        </div>
+    </div>
+    <div class="flex-main">
+        <main>
+            <div class="contenido">
+                <div class="unidad" id="funciones">
+                    <h2>Módulo 3: Manejo de funciones.</h2>
+                        <h3 id="trespuntouno">3.1. Definición.</h3>
+                        <p>En el lenguaje de programación C, una función es el equivalente a lo que es una subrutina en otros lenguajes de programación. Es una forma conveniente de encapsular o aislar algunos cálculos o algún procedimiento, los cuales se pueden emplear despúes. Las funciones se diseñan para cumplir con una tarea especifica y para tener un código más modulado y organizado.</p>
+                        <p>Las funciones en el lenguaje C pueden aparecer en cualquier orden y en uno o varios archivos fuente, pero una función no puede separarse, ni en el mismo archivo ni en diferentes.</p>
+                        <p>Al igual que las variables, las funciones también necesitan ser declaradas. Lo que se les conoce como prototipo de una función. Esto solo se necesita hacer si las funciones fueron declaradas después de la función principal.</p>
+                        <br>
+                        <p><b>Parámetros:</b></p>
+                        <p>Los parámetros son las variables nombradas en la lista entre paréntesis de la definición de una función. Los parámetros deben ser declarados con su tipo de dato y su respectivo identificador. Es posible no especificar exactamente la cantidad de parámetros que recibirá la función, para esto es necesario poner una coma seguida de tres puntos (,...), esto le indica al compiladorr que puede que pasen más argumentos a la función, pero no se le proporciona más información acerca de ellos.</p>
+                        <br>
+                        <p><b>Variables y sus alcances:</b></p>
+                        <p>Las variables que son declaradas dentro de una función comienzan a existir desde el momento en el que se invoca a la función y son borradas de memoria cuando la función termina, estas son llamadas variables locales. <br>Como alternativa de las variables locales, se pueden declarar variables externas o globales, las cuales son accesibles desde cualquier parte del programa.</p>
+                        <p>Cuando una variable es transferida de una función a otra, normalmente se transfiere "por valor", es decir, que la función que es invocada recibe los valores de sus argumentos en variables temporales y no en las originales. Una función que es invocada en el lenguaje C no puede modificar el valor de una variable que esta en la función que la invocó, unicamente puede modificar su copia privada y temporal.</p>
+
+
+                        <h3 id="trespuntodos">3.2. Funciones sin paso de párametros.</h3>
+                        <p>Las funciones sin paso de párametros son aquellas que no reciben ningún valor de entrada cuando es invocada, únicamente ejecuta el código que contiene dentro de la función y puede regresar un valor a la función que la invocó.</p>
+                            <p class="ejemplo">Ejemplo (Práctica 52).</p>
+                                <p class="ejemplo">Pseudocódigo:</p>
+                                <pre>Librerías<br>Raiz()<br>Inicio<br>    Real num, res<br>    Imprimir("Ingresa el número que se le desea aplicar la raíz cuadrada: ")<br>    Leer(num)<br>    res <- Raizcuad(num)<br>    Regresa res<br>Fin<br><br>Potencia()<br>Inicio<br>    Real num, res, potencia<br>    Imprimir("Ingresa el número que se le desea aplicar la potencia: ")<br>    Leer(num)<br>    Imprimir("Ingresa la potencia deseada: ")<br>    Leer(potencia)<br>    res <- num ^ potencia<br>    Regresar res<br>Fin<br><br>Coseno()<br>Inicio<br>    Real num, res<br>    Imprimir("Ingresa el número que se desea calcular el coseno: ")<br>    Leer(num)<br>    res <- cos(num)<br>    Regresa res<br>Fin<br><br>logaritmoNatural()<br>Inicio<br>    Real num, res<br>    Imprimir("Ingresa el número que se desea calcular el logaritmo natural: ")<br>    Leer(num)<br>    res <- log(num)<br>    Regresa res<br>Fin<br><br>Principal()<br>Inicio<br>    Entero menu <- 1, opc<br>    Hacer<br>        Inicio<br>            Imprimir("Bienvenido!, Que operación quieres realizar?")<br>            Imprimir("1. Raíz Cuadrada 2. Potencia de un numero 3. Coseno de un numero 4. Logaritmo natural<br>            de un número. 5. Salir del programa");<br>            Imprimir("Ingresa el numero de la opción: ");<br>            Leer(opc)<br>            Según sea ()<br>            Inicio<br>                Caso 1:<br>                    Imprimir("La raíz es: ", Raiz())<br>                    Interrumpir<br>                Caso 2:<br>                    Imprimir("La potencia es: ", Potencia())<br>                    Interrumpir<br>                Caso 3:<br>                    Imprimir("El coseno es: ", Coseno())<br>                    Interrumpir<br>                Caso 4:<br>                    Imprimir("El logaritmo natural es: ", logaritmoNatural())<br>                    Interrumpir<br>                Caso 5:<br>                    Imprimir("Adiós")<br>                    Interrumpir<br>                Otro:<br>                    Imprimir("Opción inexistente")<br>                    Interrumpir<br>            Fin<br>        Fin<br>    Mientras(menu = 1)<br>    Regresa 0<br>Fin</pre>
+                                <p class="ejemplo">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/5613c4eedad921b6d3dbedb1f18e310b.js"></script>
+                                <p class="ejemplo">Captura en ejecución: </p>
+                                <img src="./img/3/3.2.jpg" alt="">
+
+                        <h3 id="trespuntotres">3.3. Funciones con paso de párametros por valor.</h3>
+                        <p>Las funciones con paso de párametros son aquellas que reciben uno o más valores en el momento en el que son invocadas, esto con el proposito de realizar un proceso con esos datos o un proceso condicionado al valor de esos datos.</p>
+                        <p>Existen dos tipos de paso de párametros, el paso de párametros por valor y el paso de párametros por referencia.</p>
+                        <br>
+                        <p><b>Por valor: </b>En este tipo de paso de párametros los valores de las variables son copiados en un grupo de variables locales dentro de la función, por lo que si se modifica el valor de estas, no tendra impacto en las variables originales. Los datos primitivos como Int, Float, Double y Char utilizan este método de paso de párametros.</p>
+                        <br>
+                        <p><b>Por referencia: </b>En este tipo de paso de párametros las variables no son pasadas del todo, si no que se pasa la dirección en memoria hacia la función y ya en esta se utiliza la dirección que le fue proporcionada para guardar datos, es todo lo contrario al anterior método, ya que esta si modifica el valor de las variables originales. Los datos de tipo arreglo utilizan este método de paso de párametros.</p>
+                            <h4 class="sub">3.3.1. Funciones con parámetros usando datos primitivos.</h4>
+                                <p class="ejemplo">Ejemplo (Práctica 54).</p>
+                                <p class="ejemplo">Pseudocódigo:</p>
+                                <pre>Librerías<br>Entero factorial(Entero fact)<br>Inicio<br>    Entero contador, total <- 1<br>    contador <- factorial<br>    Hacer<br>        Inicio<br>            total <- total * contador<br>            dec contador<br>        Fin<br>    Mientras (contador >= 1)<br>    Regresa total<br>Fin<br><br>Entero Principal()<br>Inicio<br>    Entero fact<br>    Imprimir("Ingrese el factorial a calcular: ")<br>    Leer(fact)<br>    Imprimir("El factorial del número que elegiste es: ", factorial(fact))<br>    Regresa 0<br>Fin</pre>
+                                <p class="ejemplo">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/81f0612f4df62b1aa9e31703dbf8936d.js"></script>
+                                <p class="ejemplo">Captura en ejecución: </p>
+                                <img src="./img/3/3.3.1.jpg" alt="">
+                                
+                                
+                            <h4 class="sub">3.3.2. Funciones con parámetros usando arreglos.</h4>
+                                <p class="ejemplo">Ejemplo (Práctica 60).</p>
+                                <p class="ejemplo">Pseudocódigo:</p>
+                                <pre>Librerías<br>Constante TAM 100<br><br>Entero ordenar (entero n, entero x[])<br><br>Principal<br>Inicio<br>    Entero i, n, x[TAM]<br>    Imprimir("¿Cuántos números serán introducidos?")<br>    Leer(n)<br>    Desde(i <- 0; i < n; inc i)<br>    Inicio<br>        Imprimir("i = ", i + 1, "x = ")<br>        Leer(x[i])<br>    Fin<br>    ordenar(n, x)<br>    Imprimir("Lista de números ordenada")<br>    Desde (i <- 0; i < n; inc i)<br>        Imprimir("i = ", i + 1, "x = ", x[i])<br>    Regresa(0)<br>Fin<br><br>Entero ordenar(Entero n, Entero x[])<br>Inicio<br>    Entero i, elem, temp<br>    Desde(elem <- 0; elem < n - 1; inc elem)<br>    Inicio<br>        Desde(i <- elem + 1; i < n; inc i)<br>        Inicio<br>            Si (x[i] < x[elem])<br>            Inicio<br>                temp <- x[elem]<br>                x[elem] <- x[i]<br>                x[i] <- temp<br>            Fin<br>        Fin<br>    Fin<br>    Regresa(0)<br>Fin</pre>
+                                <p class="ejemplo">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/4577131f2f98d7d9d9983f2714c9b8cd.js"></script>
+                                <p class="ejemplo">Captura en ejecución: </p>
+                                <img src="./img/3/3.3.2.jpg" alt="">
+
+
+                </div>
+            </div>
+        </main>
+        <aside>
+            <div class="lateral">
+                <img id="menu" src="./img/menu.png">
+                <div id="menu-cont">
+                    <p id="modulo1-texto">Módulo 1: Programación estructurada <span id="m1-sim">↓</span> </p>
+                    <div id="modulo1">
+                        <a href="./modulo1.html#unopuntouno">1.1. Conceptos basicos de programación estructurada.</a>
+                        <a href="./modulo1.html#unopuntodos">1.2. Algoritmo.</a>
+                        <a href="./modulo1.html#unopuntotres">1.3. Estructuras de control.</a>
+                        <a href="./modulo1.html#unopuntocuatro">1.4. Estructuras anidadas.</a>
+                    </div>
+                    <p id="modulo2-texto">Módulo 2: Arreglos <span id="m2-sim">↓</span> </p>
+                    <div id="modulo2">
+                        <a href="./modulo2.html#dospuntouno">2.1. Definición.</a>
+                        <a href="./modulo2.html#dospuntodos">2.2. Tipos de arreglos.</a>
+                    </div>
+                    <p id="modulo3-texto">Módulo 3: Manejo de funciones <span id="m3-sim">↓</span> </p>
+                    <div id="modulo3">
+                        <a href="./modulo3.html#trespuntouno">3.1. Definición.</a>
+                        <a href="./modulo3.html#trespuntodos">3.2. Funciones sin paso de párametros.</a>
+                        <a href="./modulo3.html#trespuntotres">3.3. Funciones con paso de párametros por valor.</a>
+                    </div>
+                    <p id="modulo4-texto">Módulo 4: Registros <span id="m4-sim">↓</span> </p>
+                    <div id="modulo4">
+                        <a href="./modulo4.html#cuatropuntouno">4.1. Definición.</a>
+                        <a href="./modulo4.html#cuatropuntodos">4.2. Operaciones con registros.</a>
+                        <a href="./modulo4.html#cuatropuntotres">4.3. Arreglos con elementos de tipo registro.</a>
+                    </div>
+                    <a href="./index.html" style="text-align: center; margin-top: 5rem;">Página principal.</a>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer>Proyecto realizado por Benavides Hernandez Isaac Alain</footer>
+</body>
+<script src="./js/efectos.js"></script>
+</html>
