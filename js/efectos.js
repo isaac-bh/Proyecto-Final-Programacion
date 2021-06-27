@@ -50,6 +50,12 @@ $("#modulo4-texto").click(function(){
     }
 });
 
+toogled5 = true;
+$("#menu").click(function(){
+    $("#menu-cont").toggle("slow");
+});
+
+
 $("#modulo1").toggle("slow");
 $("#modulo2").toggle("slow");
 $("#modulo3").toggle("slow");
