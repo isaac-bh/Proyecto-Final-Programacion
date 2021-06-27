@@ -502,32 +502,59 @@
                                 
                                 <p><b>Asignación utilizando punteros: </b>Para utilizar los punteros de registros es necesario que el registro sea declarado en modo puntero o en su defecto que se pase la dirección de memoria de la estructura a otra función.</p>
                                 <p>Para la asignación de datos de un registro utilizando punteros se pueden utilizar dos métodos, el primero es con el signo de puntero (*) en conjunto con el operador miembro de la estructura (.), se indica que es un puntero, se pone el alias y estos dos se encierran en parentesis, posteriormente se pone el operador miembro de la estructura y el campo al cual se quiere acceder.</p>
-                                <p>O existe el operador flecha (->), el cual fue hecho por los creadores del lenguaje C para abreviar el método anterior, sobre todo para que el código tuviera más legibilidad.</p>
+                                <p>O existe el operador flecha (->), el cual fue hecho por los creadores del lenguaje C para abreviar el método anterior, sobre todo para que el código tuviera más legibilidad. En los siguientes ejemplos solo emplearé el operador flecha ya que tiene una legibilidad mayor.</p>
                                 <p class="ejemplo">Ejemplo:</p>
                                 <p class="ejemplo">Código en C:</p>
                                 <script src="https://gist.github.com/isaac-bh/8b2c19f3666abec09b1bee4d8e4dffa1.js"></script>
 
                             <h4 class="sub">4.2.2. Salida de datos de un registro.</h4>
-                                <p class="ejemplo">Ejemplo (Práctica 1).</p>
-                                <p class="ejemplo">Pseudocódigo:</p>
+                            <p>Al igual que la asignación, existen dos métodos basicos para asignar datos a un registro, con el operador miembro de la estructura (.) y con el operador flecha (->).</p>
+                            <br>
+                            <p><b>Salida de datos con el operador miembro de la función:</b></p>
+                                <p class="ejemplo" style="margin-top: 0 !important;">Ejemplo.</p>
                                 <p class="ejemplo">Código en C:</p>
-                                <p class="ejemplo">Captura en ejecución: </p>
+                                <script src="https://gist.github.com/isaac-bh/000fd59ce57967cef6b757689aca619f.js"></script>
+                            
+                            <p>Al igual que la asignación, existen dos métodos basicos para asignar datos a un registro, con el operador miembro de la estructura (.) y con el operador flecha (->).</p>
+                            <br>
+                            <p><b>Salida de datos utilizando punteros:</b></p>
+                                <p class="ejemplo">Ejemplo.</p>
+                                <p class="ejemplo" style="margin-top: 0 !important;">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/d0296b4752eb376060bcf10321860471.js"></script>
 
                         <h3>4.3. Arreglos con elementos de tipo registro.</h3>
                             <h4 class="sub">4.3.1. Definición</h4>
+                            <p>Los arreglos con elementos de tipo registro son una colección de varias entidades relacionadas que tienen algo en común y las cuales, cada una guarda varios datos que pueden ser de diferentes tipos, o tambien pueden guardar otros registros. Estos son agrupados en un solo identificador y se accede a ellos gracias a un índice.</p>
+                            <p>También se les conoce como una expansión lateral de las estructuras simples o estructuras anidadas, ya que se pasa de guardar un solo valor en cada campo a guardar varios datos con la misma estructura sin declarar varios alias.</p>
                             <h4 class="sub">4.3.2. Operaciones con arreglos de registros</h4>
+                            <p>Este tipo de registro está sujeto a las operaciones fundamentales de lso registros, copiarla, asignarla, tomar su dirección y tener acceso a los miembros de sus elementos. Sin embargo, los miembros de sus elementos si pueden utilizar todas las operaciones que vienen con su tipo de dato, en caso de enteros o flotantes, operaciones numéricas, en caso de cadenas de carácteres, funciones de la libreria String.h.</p>
+                            <p>Aqui se debe de mencionar algo importante con respecto al uso de punteros con este tipo de registros, ya que puede resultar algo complicado. Para poder lograr pasar o referenciar el arreglo de registros que contiene una función es necesario crear un puntero del mismo tipo que la estructura, sin embargo este será un puntero simple, sin dimensión, a diferencia del arreglo. Este apuntará al principio del arreglo de registros y para pasar al siguiente elemento del arreglo se debe de incrementar en 1 el puntero.</p>
                             <h4>4.3.2.1. Entrada de datos de los elementos de un arreglo de registros.</h4>
-                                <p class="ejemplo">Ejemplo (Práctica 1).</p>
-                                <p class="ejemplo">Pseudocódigo:</p>
-                                <p class="ejemplo">Código en C:</p>
-                                <p class="ejemplo">Captura en ejecución: </p>
+                            <p><b>Por inicialización: </b>La inicialización se puede realizar únicamente cuando se declara el alias, de otra manera no se podrán inicializar todos los valores de una sola vez.</p>
+                                <p class="ejemplo">Ejemplo.</p>
+                                <p class="ejemplo" style="margin-top: 0 !important;">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/f2046451c6c2a40a97a41c2125e84b40.js"></script>
+                            <p><b>Asignación por el operador miembro de la estructura: </b>Se utiliza de igual manera que en los otros tipos de estructura, solo que agregando el índice al alias para especificar cual elemento del arreglo se quiere acceder. Recordemos que el operador miembro de la estructura es representado con un punto (.) y se utiliza para referenciar a un campo especifico de la estructura y no a toda la estructura.</p>
+                                <p class="ejemplo">Ejemplo.</p>
+                                <p class="ejemplo" style="margin-top: 0 !important;">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/44e5d5c2dd22d6aa087cf028a44b0569.js"></script>
+                            <p><b>Asignación utilizando punteros: </b>Se utilizan de igual manera que en los otros tipos de estructura, solo que recordemos la advertencia anterior, los punteros para los arreglos de registros son un puntero que apunta al principio del arreglo y posteriormente se tiene que incrementar su valor para que itere por el arreglo.</p>
+                                <p class="ejemplo">Ejemplo.</p>
+                                <p class="ejemplo" style="margin-top: 0 !important;">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/695511470d7eb56c2434fc04ea51c570.js"></script>
 
-                            <h4>4.3.2.2. Salida de datos de un arreglo de registros..</h4>
-                                <p class="ejemplo">Ejemplo (Práctica 1).</p>
-                                <p class="ejemplo">Pseudocódigo:</p>
-                                <p class="ejemplo">Código en C:</p>
-                                <p class="ejemplo">Captura en ejecución: </p>
+                            <h4>4.3.2.2. Salida de datos de un arreglo de registros.</h4>
+                            <p>Los métodos de salida de datos de un arreglo de registros son los mismos métodos que se utilizan para entrada de datos, solo se utilizan otras funciones para hacer esto, en lugar de scanf se utiliza printf por ejemplo.</p>
+                            <br>
+                            <p><b>Salida por el operador miembro de la estructura: </b>Se utiliza de igual manera que en la entrada de datos, se especifica el alias seguido del índice al que se quiere acceder, seguido del operador (.) y el campo que se quiere imprimir.</p>
+                                <p class="ejemplo">Ejemplo.</p>
+                                <p class="ejemplo" style="margin-top: 0 !important;">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/66a303f023753cd4deced2bcdb6a7394.js"></script>
 
+                            <p><b>Salida utilizando punteros: </b>Se utilizan los mismos métodos que en la entrada de datos. Recordemos que los punteros de los arreglos de registros apuntan al primer elemento del arreglo, por lo que si se quiere utilizar para todos los elementos se tiene que incrementar el valor del puntero para que apunte hacia el siguiente elemento.</p>
+                                <p class="ejemplo">Ejemplo.</p>
+                                <p class="ejemplo" style="margin-top: 0 !important;">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/1f548a551a2c137cc4b4dcfd6166f43e.js"></script>
                 </div>
             </div>
         </main>
