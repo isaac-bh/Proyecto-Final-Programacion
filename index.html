@@ -475,14 +475,37 @@
                 <div class="unidad" id="registros">
                     <h2>Módulo 4: Registros.</h2>
                         <h3>4.1. Definición.</h3>
-                        <p>En el lenguaje C, los registros son una colección de una o más variables, de tipos posiblemente diferentes, las cuales son agrupadas bajo un solo nombre para manejo conveniente. Los registros, en el lenguaje C son también conocidos como estructuras. Los registros ayudan a organizar datos complicados, en particular dentro de programas grandes, debido a que permiten que a un grupo de variables relacionadas se les trate como una unidad en lugar de como entidades separadas. Los registros pueden ser copiados, se puede obtener su dirección en memoria, se puede acceder a los valores de sus miembros, y por ende, pueden ser pasados como parámetros o también ser regresados por una función. Los registros fueron diseñados para que los programadores pudieran crear su “propio tipo de dato”, el cual se ajusta a necesidades, en lenguaje C, los registros es lo que mas se acerca a una tabla en una base de datos.
-                            </p>
+                        <p>En el lenguaje C, los registros son una colección de una o más variables, de tipos posiblemente diferentes, las cuales son agrupadas bajo un solo nombre para manejo conveniente. Los registros, en el lenguaje C son también conocidos como estructuras. Los registros ayudan a organizar datos complicados, en particular dentro de programas grandes, debido a que permiten que a un grupo de variables relacionadas se les trate como una unidad en lugar de como entidades separadas. Los registros pueden ser copiados, se puede obtener su dirección en memoria, se puede acceder a los valores de sus miembros, y por ende, pueden ser pasados como parámetros o también ser regresados por una función. Los registros fueron diseñados para que los programadores pudieran crear su “propio tipo de dato”, el cual se ajusta a necesidades, en lenguaje C, los registros es lo que mas se acerca a una tabla en una base de datos.</p>
+                        <p>El modificador typedef nos permite definir a una estructura como un tipo de dato nuevo para el lenguaje C, se necesita especificar que nombre se le asignara al nuevo tipo de dato.</p>
+                        <br>
+                        <p><b>Tipos de registro.</b></p>
+                        <br>
+                        <p><b>Registros simples: </b>Este tipo de registro solo contiene información de una sola entidad.</p>
+                        <br>
+                        <pre>typedef struct {<br>    char nombre[50];<br>    char sexo[20];<br>    char rfc[13];<br>    char domicilio[100];<br>} Empleado;</pre>
+                        <br>
+                        <p><b>Registros anidados: </b>Este tipo de registro permite contener datos de diferentes entidades que tengan una relación entre si.</p>
+                        <br>
+                        <pre>typedef struct {<br>    char fecha[50];<br>    int tieneSeguroMedico;<br>    struct Empleado{<br>        char nombre[50];<br>        char sexo[20];<br>        char rfc[13];<br>        char domicilio[100];<br>    } paciente;<br>    char enfermedadCronica[50];<br>} RegistroMedico;</pre>
+                        <br>
+                        <p><b>Arreglos de registros: </b>Este tipo de registro funciona al igual que un registro de datos primitivos. Al igual que un arreglo normal este nos permite juntar varios datos del mismo tipo en el mismo identificador y accediendo a estos a través de un índice, solo que en este caso es un tipo de dato que nosotros mismos definimos.</p>
+                        <br>
+                        <pre>typedef struct {<br>    char fecha[50];<br>    int quincena;<br>    struct Empleado{<br>        char nombre[50];<br>        int sexo;<br>        char rfc[13];<br>        char domicilio[100];<br>    } empleados[10];<br>    int bonos;<br>    int fondoDeAhorro;<br>} Nomina;</pre>
                         <h3>4.2. Operaciones con registros.</h3>
                             <h4 class="sub">4.2.1. Asignación a los datos de un registro.</h4>
-                                <p class="ejemplo">Ejemplo (Práctica 1).</p>
-                                <p class="ejemplo">Pseudocódigo:</p>
+                            <p>Existen dos maneras basicas de asignar datos a los registros, en una se trabaja con registros que son declarados globalmente o localmente pero fueron declarados en la misma función que se esta modificando. Y en la segunda manera se trabaja con direcciones de memoria para transferir registros entre funciones.</p>
+                            <br>
+                            <p><b>Asignación con operador miembro de la estructura: </b>El operador miembro de la estructura se representa en C como un punto (.), este operador se utiliza para referenciar en especifico a un campo de la estructura. Para utilizar este método se pone el nombre del alias de la estructura seguido de un punto y el campo en el que se quieren guardar los datos.</p>
+                                <p class="ejemplo">Ejemplo:</p>
                                 <p class="ejemplo">Código en C:</p>
-                                <p class="ejemplo">Captura en ejecución: </p>
+                                <script src="https://gist.github.com/isaac-bh/23aff68e9b201d614a096976fe68a354.js"></script>
+                                
+                                <p><b>Asignación utilizando punteros: </b>Para utilizar los punteros de registros es necesario que el registro sea declarado en modo puntero o en su defecto que se pase la dirección de memoria de la estructura a otra función.</p>
+                                <p>Para la asignación de datos de un registro utilizando punteros se pueden utilizar dos métodos, el primero es con el signo de puntero (*) en conjunto con el operador miembro de la estructura (.), se indica que es un puntero, se pone el alias y estos dos se encierran en parentesis, posteriormente se pone el operador miembro de la estructura y el campo al cual se quiere acceder.</p>
+                                <p>O existe el operador flecha (->), el cual fue hecho por los creadores del lenguaje C para abreviar el método anterior, sobre todo para que el código tuviera más legibilidad.</p>
+                                <p class="ejemplo">Ejemplo:</p>
+                                <p class="ejemplo">Código en C:</p>
+                                <script src="https://gist.github.com/isaac-bh/8b2c19f3666abec09b1bee4d8e4dffa1.js"></script>
 
                             <h4 class="sub">4.2.2. Salida de datos de un registro.</h4>
                                 <p class="ejemplo">Ejemplo (Práctica 1).</p>
